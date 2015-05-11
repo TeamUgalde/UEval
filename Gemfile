@@ -45,7 +45,15 @@ end
 gem "twitter-bootstrap-rails"
 gem "therubyracer"
 gem "less-rails"
+
 # Use FontAwesome styles
 gem "font-awesome-rails"
+
 #Use haml instead of erb
 gem "haml-rails"
+
+#Use devise authentication
+gem 'devise'
+
+#Use facebook omni-auth
+gem 'omniauth-facebook'
