@@ -54,3 +54,6 @@ gem "haml-rails"
 
 #Use devise authentication
 gem 'devise'
+
+#Use facebook omni-auth
+gem 'omniauth-facebook'
