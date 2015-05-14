@@ -1,0 +1,25 @@
+- model_class = Professor
+.page-header
+  %h1=t '.title', :default => model_class.model_name.human.titleize
+
+%p
+  %strong= model_class.human_attribute_name(:name) + ':'
+  %br
+  = @professor.name
+%p
+  %strong= model_class.human_attribute_name(:last_name) + ':'
+  %br
+  = @professor.last_name
+%p
+  %strong= model_class.human_attribute_name(:overall_score) + ':'
+  %br
+  = @professor.overall_score
+%p
+  %strong= model_class.human_attribute_name(:school_id) + ':'
+  %br
+  = @professor.school_id
+
+
+= link_to t('.back', :default => t("helpers.links.back")), professors_path, :class => 'btn btn-default'
+= link_to t('.edit', :default => t("helpers.links.edit")), edit_professor_path(@professor), :class => 'btn btn-default'
+= link_to t('.destroy', :default => t("helpers.links.destroy")), professor_path(@professor), :method => "delete", :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-danger'

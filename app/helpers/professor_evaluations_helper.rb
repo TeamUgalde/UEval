@@ -1,0 +1,2 @@
+module ProfessorEvaluationsHelper
+end

@@ -1,0 +1,21 @@
+- model_class = CourseEvaluation
+.page-header
+  %h1=t '.title', :default => model_class.model_name.human.titleize
+
+%p
+  %strong= model_class.human_attribute_name(:difficulty) + ':'
+  %br
+  = @course_evaluation.difficulty
+%p
+  %strong= model_class.human_attribute_name(:user_id) + ':'
+  %br
+  = @course_evaluation.user_id
+%p
+  %strong= model_class.human_attribute_name(:course_id) + ':'
+  %br
+  = @course_evaluation.course_id
+
+
+= link_to t('.back', :default => t("helpers.links.back")), course_evaluations_path, :class => 'btn btn-default'
+= link_to t('.edit', :default => t("helpers.links.edit")), edit_course_evaluation_path(@course_evaluation), :class => 'btn btn-default'
+= link_to t('.destroy', :default => t("helpers.links.destroy")), course_evaluation_path(@course_evaluation), :method => "delete", :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-danger'

@@ -1,0 +1,1 @@
+json.extract! @professor_evaluation, :id, :arrival_puntuality, :feedback_puntuality, :knowledge, :addresses_questions, :learning_interest, :difficulty, :clearness, :respectful, :course_name, :overall_score, :created_at, :updated_at

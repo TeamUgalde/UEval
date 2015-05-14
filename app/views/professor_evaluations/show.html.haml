@@ -1,0 +1,57 @@
+- model_class = ProfessorEvaluation
+.page-header
+  %h1=t '.title', :default => model_class.model_name.human.titleize
+
+%p
+  %strong= model_class.human_attribute_name(:arrival_puntuality) + ':'
+  %br
+  = @professor_evaluation.arrival_puntuality
+%p
+  %strong= model_class.human_attribute_name(:feedback_puntuality) + ':'
+  %br
+  = @professor_evaluation.feedback_puntuality
+%p
+  %strong= model_class.human_attribute_name(:knowledge) + ':'
+  %br
+  = @professor_evaluation.knowledge
+%p
+  %strong= model_class.human_attribute_name(:addresses_questions) + ':'
+  %br
+  = @professor_evaluation.addresses_questions
+%p
+  %strong= model_class.human_attribute_name(:learning_interest) + ':'
+  %br
+  = @professor_evaluation.learning_interest
+%p
+  %strong= model_class.human_attribute_name(:difficulty) + ':'
+  %br
+  = @professor_evaluation.difficulty
+%p
+  %strong= model_class.human_attribute_name(:clearness) + ':'
+  %br
+  = @professor_evaluation.clearness
+%p
+  %strong= model_class.human_attribute_name(:respectful) + ':'
+  %br
+  = @professor_evaluation.respectful
+%p
+  %strong= model_class.human_attribute_name(:course_name) + ':'
+  %br
+  = @professor_evaluation.course_name
+%p
+  %strong= model_class.human_attribute_name(:overall_score) + ':'
+  %br
+  = @professor_evaluation.overall_score
+%p
+  %strong= model_class.human_attribute_name(:user_id) + ':'
+  %br
+  = @professor_evaluation.user_id
+%p
+  %strong= model_class.human_attribute_name(:professor_id) + ':'
+  %br
+  = @professor_evaluation.professor_id
+
+
+= link_to t('.back', :default => t("helpers.links.back")), professor_evaluations_path, :class => 'btn btn-default'
+= link_to t('.edit', :default => t("helpers.links.edit")), edit_professor_evaluation_path(@professor_evaluation), :class => 'btn btn-default'
+= link_to t('.destroy', :default => t("helpers.links.destroy")), professor_evaluation_path(@professor_evaluation), :method => "delete", :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-danger'
