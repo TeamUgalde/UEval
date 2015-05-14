@@ -1,0 +1,18 @@
+= form_for @course, html: { class: "form form-horizontal course" } do |f|
+  .form-group
+    = f.label :name, class: 'control-label'
+    .controls
+      = f.text_field :name, class: 'form-control', required: true
+    = error_span(@course[:name])
+  .form-group
+    = f.label :overall_difficulty, class: 'control-label'
+    .controls
+      = f.text_field :overall_difficulty, class: 'form-control', required: true
+    = error_span(@course[:overall_difficulty])
+  .form-group
+    = f.label :school_id, class: 'control-label'
+    .controls
+      = f.text_field :school_id, class: 'form-control', required: true
+    = error_span(@course[:school_id])
+  = f.submit nil,class: 'btn btn-primary'
+  = link_to t('.cancel', :default => t("helpers.links.cancel")), courses_path, :class => 'btn btn-default'

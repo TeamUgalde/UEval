@@ -1,0 +1,43 @@
+- model_class = ProfessorEvaluation
+.page-header
+  %h1=t '.title', :default => model_class.model_name.human.pluralize.titleize
+%table.table.table-striped
+  %thead
+    %tr
+      %th= model_class.human_attribute_name(:id)
+      %th= model_class.human_attribute_name(:arrival_puntuality)
+      %th= model_class.human_attribute_name(:feedback_puntuality)
+      %th= model_class.human_attribute_name(:knowledge)
+      %th= model_class.human_attribute_name(:addresses_questions)
+      %th= model_class.human_attribute_name(:learning_interest)
+      %th= model_class.human_attribute_name(:difficulty)
+      %th= model_class.human_attribute_name(:clearness)
+      %th= model_class.human_attribute_name(:respectful)
+      %th= model_class.human_attribute_name(:course_name)
+      %th= model_class.human_attribute_name(:overall_score)
+      %th= model_class.human_attribute_name(:user_id)
+      %th= model_class.human_attribute_name(:professor_id)
+      %th= model_class.human_attribute_name(:created_at)
+      %th=t '.actions', :default => t("helpers.actions")
+  %tbody
+    - @professor_evaluations.each do |professor_evaluation|
+      %tr
+        %td= link_to professor_evaluation.id, professor_evaluation_path(professor_evaluation)
+        %td= professor_evaluation.arrival_puntuality
+        %td= professor_evaluation.feedback_puntuality
+        %td= professor_evaluation.knowledge
+        %td= professor_evaluation.addresses_questions
+        %td= professor_evaluation.learning_interest
+        %td= professor_evaluation.difficulty
+        %td= professor_evaluation.clearness
+        %td= professor_evaluation.respectful
+        %td= professor_evaluation.course_name
+        %td= professor_evaluation.overall_score
+        %td= professor_evaluation.user_id
+        %td= professor_evaluation.professor_id
+        %td=l professor_evaluation.created_at
+        %td
+          = link_to t('.edit', :default => t("helpers.links.edit")), edit_professor_evaluation_path(professor_evaluation), :class => 'btn btn-default btn-xs'
+          = link_to t('.destroy', :default => t("helpers.links.destroy")), professor_evaluation_path(professor_evaluation), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs btn-danger'
+
+= link_to t('.new', :default => t("helpers.links.new")), new_professor_evaluation_path, :class => 'btn btn-primary'

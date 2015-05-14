@@ -1,0 +1,63 @@
+= form_for @professor_evaluation, html: { class: "form form-horizontal professor_evaluation" } do |f|
+  .form-group
+    = f.label :arrival_puntuality, class: 'control-label'
+    .controls
+      = f.text_field :arrival_puntuality, class: 'form-control', required: true
+    = error_span(@professor_evaluation[:arrival_puntuality])
+  .form-group
+    = f.label :feedback_puntuality, class: 'control-label'
+    .controls
+      = f.text_field :feedback_puntuality, class: 'form-control', required: true
+    = error_span(@professor_evaluation[:feedback_puntuality])
+  .form-group
+    = f.label :knowledge, class: 'control-label'
+    .controls
+      = f.text_field :knowledge, class: 'form-control', required: true
+    = error_span(@professor_evaluation[:knowledge])
+  .form-group
+    = f.label :addresses_questions, class: 'control-label'
+    .controls
+      = f.text_field :addresses_questions, class: 'form-control', required: true
+    = error_span(@professor_evaluation[:addresses_questions])
+  .form-group
+    = f.label :learning_interest, class: 'control-label'
+    .controls
+      = f.text_field :learning_interest, class: 'form-control', required: true
+    = error_span(@professor_evaluation[:learning_interest])
+  .form-group
+    = f.label :difficulty, class: 'control-label'
+    .controls
+      = f.text_field :difficulty, class: 'form-control', required: true
+    = error_span(@professor_evaluation[:difficulty])
+  .form-group
+    = f.label :clearness, class: 'control-label'
+    .controls
+      = f.text_field :clearness, class: 'form-control', required: true
+    = error_span(@professor_evaluation[:clearness])
+  .form-group
+    = f.label :respectful, class: 'control-label'
+    .controls
+      = f.text_field :respectful, class: 'form-control', required: true
+    = error_span(@professor_evaluation[:respectful])
+  .form-group
+    = f.label :course_name, class: 'control-label'
+    .controls
+      = f.text_field :course_name, class: 'form-control', required: true
+    = error_span(@professor_evaluation[:course_name])
+  .form-group
+    = f.label :overall_score, class: 'control-label'
+    .controls
+      = f.text_field :overall_score, class: 'form-control', required: true
+    = error_span(@professor_evaluation[:overall_score])
+  .form-group
+    = f.label :user_id, class: 'control-label'
+    .controls
+      = f.text_field :user_id, class: 'form-control', required: true
+    = error_span(@professor_evaluation[:user_id])
+  .form-group
+    = f.label :professor_id, class: 'control-label'
+    .controls
+      = f.text_field :professor_id, class: 'form-control', required: true
+    = error_span(@professor_evaluation[:professor_id])
+  = f.submit nil,class: 'btn btn-primary'
+  = link_to t('.cancel', :default => t("helpers.links.cancel")), professor_evaluations_path, :class => 'btn btn-default'
