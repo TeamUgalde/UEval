@@ -36,9 +36,11 @@
                 = link_to new_user_session_path, :class => 'navbar-link' do
                   %i.fa.fa-sign-in
                     Entrar
-
       %main
+        = render partial: "partials/alerts", flash: flash
         = yield
+
+
 
       %footer.footer
         %nav.navbar.navbar-default

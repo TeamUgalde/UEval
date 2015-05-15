@@ -12288,3 +12288,2908 @@ Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b
 
 
 Started GET "/assets/fontawesome-webfont-e3870de89716b72cb61a4bba0e17c75783b361cdaba35ea96961c3070bd8ca18.woff" for ::1 at 2015-05-15 04:14:50 -0600
+
+
+Started GET "/" for ::1 at 2015-05-15 13:28:13 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.haml within layouts/application (1.8ms)
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+Completed 200 OK in 462ms (Views: 447.4ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-15 13:28:14 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.haml within layouts/application (0.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 115ms (Views: 113.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/edit" for ::1 at 2015-05-15 13:28:18 -0600
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered devise/registrations/edit.html.haml within layouts/application (19.8ms)
+Completed 200 OK in 126ms (Views: 123.7ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-05-15 13:28:30 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uWhPOmqOTgU0Mt6w+FCYK/8j6Zb3DPDqLRZY27U2eD4Gjtt69uHQ5bcnNtnzt/ckGLkZxRFuRvYPHl9crkA8Cg=="}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2015-05-15 13:28:30 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 103ms (Views: 102.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-15 13:37:39 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 119ms (Views: 118.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.self-80c99e8cf6504adff437612417aa3c595e3b47cd82b3540c42741a963b7acf7b.css?body=1" for ::1 at 2015-05-15 13:37:39 -0600
+
+
+Started GET "/assets/course_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:37:39 -0600
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:37:39 -0600
+
+
+Started GET "/assets/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:37:39 -0600
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:37:39 -0600
+
+
+Started GET "/assets/professor_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:37:39 -0600
+
+
+Started GET "/assets/professors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:37:39 -0600
+
+
+Started GET "/assets/scaffolds.self-a3df7ad8d3aa69851334883b7e665af9edc327a3c2824ef86f3bd3e27998a25c.css?body=1" for ::1 at 2015-05-15 13:37:39 -0600
+
+
+Started GET "/assets/schools.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:37:39 -0600
+
+
+Started GET "/assets/universities.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:37:40 -0600
+
+
+Started GET "/assets/application.self-4534e4f89541150e067a26f7ea6cd362e7c0d810ab68fc9250fc8f49029333e5.css?body=1" for ::1 at 2015-05-15 13:37:40 -0600
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-15 13:37:40 -0600
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-15 13:37:40 -0600
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-05-15 13:37:40 -0600
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-05-15 13:37:40 -0600
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-05-15 13:37:40 -0600
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-05-15 13:37:40 -0600
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-05-15 13:37:40 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-05-15 13:37:40 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-05-15 13:37:40 -0600
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-05-15 13:37:40 -0600
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-05-15 13:37:40 -0600
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-05-15 13:37:40 -0600
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-05-15 13:37:40 -0600
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-05-15 13:37:40 -0600
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-15 13:37:40 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-15 13:37:40 -0600
+
+
+Started GET "/assets/bootstrap.self-5afe7e91ef3675e2be97b8d060a7f3755d6dbc615b76df476df55143da70679f.js?body=1" for ::1 at 2015-05-15 13:37:40 -0600
+
+
+Started GET "/assets/comments.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:37:40 -0600
+
+
+Started GET "/assets/course_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:37:40 -0600
+
+
+Started GET "/assets/courses.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:37:40 -0600
+
+
+Started GET "/assets/pages.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:37:40 -0600
+
+
+Started GET "/assets/professor_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:37:40 -0600
+
+
+Started GET "/assets/professors.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:37:40 -0600
+
+
+Started GET "/assets/schools.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:37:40 -0600
+
+
+Started GET "/assets/universities.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:37:40 -0600
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-15 13:37:40 -0600
+
+
+Started GET "/assets/fontawesome-webfont-e3870de89716b72cb61a4bba0e17c75783b361cdaba35ea96961c3070bd8ca18.woff" for ::1 at 2015-05-15 13:37:40 -0600
+
+
+Started GET "/users/sign_in" for ::1 at 2015-05-15 13:37:55 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.haml (10.3ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (21.5ms)
+Completed 200 OK in 147ms (Views: 133.5ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2015-05-15 13:37:57 -0600
+
+
+Started GET "/users/auth/facebook" for ::1 at 2015-05-15 13:37:57 -0600
+
+
+Started GET "/users/auth/facebook/callback?code=AQD0nxnjNTzs6eacnmN0W-woBKjZlb3JAUkOD-52Fp3mElSOOCYsBzxP0qDPGSVzO6jZet5LIJvfUZYdDkwD6zLgm5j5oWS2xAcewrkIwwfLfxvdeeIuqbGb_aWzn5v-6hlyicfU_zKbBNvXGT3z1M9mhVzUJkekIm0Qv-QzF4Cs0zzm5wGMAbSPLOk8sC2RNJ_dC1N1WTMY9zYqn1Obak__RG7fKmb2xl9AikUNKpy21QsMINr_oyQFzqekTtFuQKPL85tnNS6ns7aMFYNYxdGIEQlr2sF1qEvzt_0CxPREO6Nd-xF-70r8JOEVyYgb48Y&state=58e1fdeae95a936b74458767d8ebfd95bb9e5551621c346d" for ::1 at 2015-05-15 13:37:57 -0600
+Processing by OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQD0nxnjNTzs6eacnmN0W-woBKjZlb3JAUkOD-52Fp3mElSOOCYsBzxP0qDPGSVzO6jZet5LIJvfUZYdDkwD6zLgm5j5oWS2xAcewrkIwwfLfxvdeeIuqbGb_aWzn5v-6hlyicfU_zKbBNvXGT3z1M9mhVzUJkekIm0Qv-QzF4Cs0zzm5wGMAbSPLOk8sC2RNJ_dC1N1WTMY9zYqn1Obak__RG7fKmb2xl9AikUNKpy21QsMINr_oyQFzqekTtFuQKPL85tnNS6ns7aMFYNYxdGIEQlr2sF1qEvzt_0CxPREO6Nd-xF-70r8JOEVyYgb48Y", "state"=>"58e1fdeae95a936b74458767d8ebfd95bb9e5551621c346d"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2  ORDER BY "users"."id" ASC LIMIT 1  [["provider", "facebook"], ["uid", "10205621378511210"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5  [["last_sign_in_at", "2015-05-15 10:29:22.765737"], ["current_sign_in_at", "2015-05-15 19:38:08.857843"], ["sign_in_count", 12], ["updated_at", "2015-05-15 19:38:08.862533"], ["id", 3]]
+  [1m[36m (63.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 79ms (ActiveRecord: 65.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-15 13:38:08 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.haml within layouts/application (0.1ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Completed 200 OK in 97ms (Views: 95.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/edit" for ::1 at 2015-05-15 13:38:48 -0600
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered devise/registrations/edit.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 124ms (Views: 121.3ms | ActiveRecord: 0.9ms)
+
+
+Started PUT "/users" for ::1 at 2015-05-15 13:38:54 -0600
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bD3RFb5EIm7LWtgavR0Ft8lGC9AmECagf25ndch7uFuLeGxs6IbodML8VFQclNZdyf5kdi7u8RH3ugpx/qxxVQ==", "user"=>{"email"=>"dieguillo.06@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered devise/registrations/edit.html.haml within layouts/application (10.3ms)
+Completed 200 OK in 224ms (Views: 126.6ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-05-15 13:39:02 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IEd1A5tVwI0c7+DbbtXlJ3MBG35Zl5+kjUy3aQrv7APHAsh6zZcKlxVJbJXPXDbNc7l02FFpSBUFmNptPDglDQ=="}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-15 13:39:02 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 109ms (Views: 108.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-15 13:42:43 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 107ms (Views: 105.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.self-80c99e8cf6504adff437612417aa3c595e3b47cd82b3540c42741a963b7acf7b.css?body=1" for ::1 at 2015-05-15 13:42:43 -0600
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:42:43 -0600
+
+
+Started GET "/assets/course_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:42:43 -0600
+
+
+Started GET "/assets/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:42:43 -0600
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:42:43 -0600
+
+
+Started GET "/assets/professor_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:42:43 -0600
+
+
+Started GET "/assets/scaffolds.self-a3df7ad8d3aa69851334883b7e665af9edc327a3c2824ef86f3bd3e27998a25c.css?body=1" for ::1 at 2015-05-15 13:42:43 -0600
+
+
+Started GET "/assets/professors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:42:43 -0600
+
+
+Started GET "/assets/schools.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:42:43 -0600
+
+
+Started GET "/assets/application.self-4534e4f89541150e067a26f7ea6cd362e7c0d810ab68fc9250fc8f49029333e5.css?body=1" for ::1 at 2015-05-15 13:42:43 -0600
+
+
+Started GET "/assets/universities.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:42:43 -0600
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-15 13:42:43 -0600
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-15 13:42:43 -0600
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-05-15 13:42:43 -0600
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-05-15 13:42:43 -0600
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-05-15 13:42:43 -0600
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-05-15 13:42:43 -0600
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-05-15 13:42:43 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-05-15 13:42:43 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-05-15 13:42:43 -0600
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-05-15 13:42:43 -0600
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-05-15 13:42:43 -0600
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-05-15 13:42:43 -0600
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-05-15 13:42:43 -0600
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-05-15 13:42:43 -0600
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-15 13:42:43 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-15 13:42:43 -0600
+
+
+Started GET "/assets/bootstrap.self-5afe7e91ef3675e2be97b8d060a7f3755d6dbc615b76df476df55143da70679f.js?body=1" for ::1 at 2015-05-15 13:42:43 -0600
+
+
+Started GET "/assets/comments.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:42:44 -0600
+
+
+Started GET "/assets/course_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:42:44 -0600
+
+
+Started GET "/assets/courses.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:42:44 -0600
+
+
+Started GET "/assets/pages.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:42:44 -0600
+
+
+Started GET "/assets/professor_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:42:44 -0600
+
+
+Started GET "/assets/schools.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:42:44 -0600
+
+
+Started GET "/assets/professors.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:42:44 -0600
+
+
+Started GET "/assets/universities.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:42:44 -0600
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-15 13:42:44 -0600
+
+
+Started GET "/assets/fontawesome-webfont-e3870de89716b72cb61a4bba0e17c75783b361cdaba35ea96961c3070bd8ca18.woff" for ::1 at 2015-05-15 13:42:44 -0600
+
+
+Started GET "/users/sign_in" for ::1 at 2015-05-15 13:42:45 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.haml (6.2ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (10.8ms)
+Completed 200 OK in 128ms (Views: 127.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2015-05-15 13:42:47 -0600
+
+
+Started GET "/users/auth/facebook" for ::1 at 2015-05-15 13:42:48 -0600
+
+
+Started GET "/users/auth/facebook/callback?code=AQD72g2UEfXvadAEuu9L_Vyuui83GSb6XSgnMWpMyHOmYFbFUiX8uQ1IHrrW8jm_vavIB1V4AL34gkSljDn9GMnx4ZQedSrcbBkPpFKNDQLVqXEgIgwYq8AhJ6rAMKvKXu01KKsLKQLV-BUNrWjjHvqe83ORlbLl0YxBuM5Mm6jNlH6NDTDD8OdNmsf_W04wGkGtDiEFQCTCYoG5NiB2VijnNoM9J-2f0990q4z4N1kIdWx6gW_ggzB18xbgayBrSLlYXSCAl879bZgU0GcllP4KKuX84tyBgHoDIhBuCSqZkeIFw_hUY_b19eS-a6hUBLw&state=26f31c3b55bd23dba1219d35f67b30e965fbfcaa33977c76" for ::1 at 2015-05-15 13:42:48 -0600
+Processing by OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQD72g2UEfXvadAEuu9L_Vyuui83GSb6XSgnMWpMyHOmYFbFUiX8uQ1IHrrW8jm_vavIB1V4AL34gkSljDn9GMnx4ZQedSrcbBkPpFKNDQLVqXEgIgwYq8AhJ6rAMKvKXu01KKsLKQLV-BUNrWjjHvqe83ORlbLl0YxBuM5Mm6jNlH6NDTDD8OdNmsf_W04wGkGtDiEFQCTCYoG5NiB2VijnNoM9J-2f0990q4z4N1kIdWx6gW_ggzB18xbgayBrSLlYXSCAl879bZgU0GcllP4KKuX84tyBgHoDIhBuCSqZkeIFw_hUY_b19eS-a6hUBLw", "state"=>"26f31c3b55bd23dba1219d35f67b30e965fbfcaa33977c76"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2  ORDER BY "users"."id" ASC LIMIT 1[0m  [["provider", "facebook"], ["uid", "10205621378511210"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["last_sign_in_at", "2015-05-15 19:38:08.857843"], ["current_sign_in_at", "2015-05-15 19:42:58.985064"], ["sign_in_count", 13], ["updated_at", "2015-05-15 19:42:58.987601"], ["id", 3]]
+  [1m[35m (18.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 28ms (ActiveRecord: 20.1ms)
+
+
+Started GET "/" for ::1 at 2015-05-15 13:42:59 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.haml within layouts/application (0.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 115ms (Views: 114.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-05-15 13:44:16 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.haml within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Completed 200 OK in 108ms (Views: 104.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.self-80c99e8cf6504adff437612417aa3c595e3b47cd82b3540c42741a963b7acf7b.css?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/course_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/professor_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/professors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/scaffolds.self-a3df7ad8d3aa69851334883b7e665af9edc327a3c2824ef86f3bd3e27998a25c.css?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/schools.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/application.self-4534e4f89541150e067a26f7ea6cd362e7c0d810ab68fc9250fc8f49029333e5.css?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/universities.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/bootstrap.self-5afe7e91ef3675e2be97b8d060a7f3755d6dbc615b76df476df55143da70679f.js?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/comments.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/course_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/courses.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/pages.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/professor_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/professors.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/schools.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/universities.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:44:16 -0600
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-15 13:44:17 -0600
+
+
+Started GET "/assets/fontawesome-webfont-e3870de89716b72cb61a4bba0e17c75783b361cdaba35ea96961c3070bd8ca18.woff" for ::1 at 2015-05-15 13:44:17 -0600
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-05-15 13:44:18 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Qp9NSlWt4MDhwWii4AMR5mz0ktbKymbvgCSX7vY1IiHqrEHQGPQzUKYRH6sFwdvwXCVvzAf7FAfiafhMp86KUg=="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-05-15 13:44:18 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 108ms (Views: 107.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-05-15 13:44:31 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.haml (4.5ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (8.6ms)
+Completed 200 OK in 120ms (Views: 119.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2015-05-15 13:44:32 -0600
+
+
+Started GET "/users/auth/facebook" for ::1 at 2015-05-15 13:44:32 -0600
+
+
+Started GET "/users/auth/facebook/callback?code=AQCSZjbKkyE4Gg3KUMQZecLqUXAz96bX6u9Ho_CcJeci34mPzsAlgRIWKCTQx6zTsfNNluSgCWoHm-qQHLGko4hpIC-2YYx5BtyrLWlmQYXhKdJgBXdwKY_RTBb6hy9DhauILhTSgmCr1HNWy-_0cjqkffG5XYvLph4FYkdj8bQQckZEKNDZZdTAPdQ1PSxD6lTI37pTNgHOGLtv-x7XIXqN7iafrKKIq2ZKN2e03K1wPMpZt8rcYmRt5rcfTTInWl-XUc_Plt6m7PkMayBPq2IN6IwtL1lLp7wZMSIZ4XH-ls-o9k9jRD-lfD2Y_0vFq4E&state=c1c240b63e9f52a77ffa9768244f17c468b0a7bf5e7adfc9" for ::1 at 2015-05-15 13:44:33 -0600
+Processing by OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQCSZjbKkyE4Gg3KUMQZecLqUXAz96bX6u9Ho_CcJeci34mPzsAlgRIWKCTQx6zTsfNNluSgCWoHm-qQHLGko4hpIC-2YYx5BtyrLWlmQYXhKdJgBXdwKY_RTBb6hy9DhauILhTSgmCr1HNWy-_0cjqkffG5XYvLph4FYkdj8bQQckZEKNDZZdTAPdQ1PSxD6lTI37pTNgHOGLtv-x7XIXqN7iafrKKIq2ZKN2e03K1wPMpZt8rcYmRt5rcfTTInWl-XUc_Plt6m7PkMayBPq2IN6IwtL1lLp7wZMSIZ4XH-ls-o9k9jRD-lfD2Y_0vFq4E", "state"=>"c1c240b63e9f52a77ffa9768244f17c468b0a7bf5e7adfc9"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2  ORDER BY "users"."id" ASC LIMIT 1  [["provider", "facebook"], ["uid", "10205621378511210"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5  [["last_sign_in_at", "2015-05-15 19:42:58.985064"], ["current_sign_in_at", "2015-05-15 19:44:44.029753"], ["sign_in_count", 14], ["updated_at", "2015-05-15 19:44:44.031611"], ["id", 3]]
+  [1m[36m (17.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 25ms (ActiveRecord: 18.8ms)
+
+
+Started GET "/" for ::1 at 2015-05-15 13:44:44 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.haml within layouts/application (0.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Completed 200 OK in 99ms (Views: 98.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-05-15 13:46:32 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.haml within layouts/application (0.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 129ms (Views: 127.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.self-80c99e8cf6504adff437612417aa3c595e3b47cd82b3540c42741a963b7acf7b.css?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/professor_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/course_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/professors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/scaffolds.self-a3df7ad8d3aa69851334883b7e665af9edc327a3c2824ef86f3bd3e27998a25c.css?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/schools.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/universities.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/application.self-4534e4f89541150e067a26f7ea6cd362e7c0d810ab68fc9250fc8f49029333e5.css?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/bootstrap.self-5afe7e91ef3675e2be97b8d060a7f3755d6dbc615b76df476df55143da70679f.js?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/comments.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/course_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/courses.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/pages.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/professor_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/professors.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/schools.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/universities.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started GET "/assets/fontawesome-webfont-e3870de89716b72cb61a4bba0e17c75783b361cdaba35ea96961c3070bd8ca18.woff" for ::1 at 2015-05-15 13:46:32 -0600
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-05-15 13:46:34 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YO7Gp1VT2g0EENqgh5XPJNp1wRbnWaQ7APlP9/Eh/S1PxDLb9jewQdSv+KowDWTHhHrLDx7My3YVWQtLJUoDJg=="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2015-05-15 13:46:34 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 108ms (Views: 107.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-15 13:48:43 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 103ms (Views: 102.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.self-80c99e8cf6504adff437612417aa3c595e3b47cd82b3540c42741a963b7acf7b.css?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/professor_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/course_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/professors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/scaffolds.self-a3df7ad8d3aa69851334883b7e665af9edc327a3c2824ef86f3bd3e27998a25c.css?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/schools.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/universities.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/application.self-4534e4f89541150e067a26f7ea6cd362e7c0d810ab68fc9250fc8f49029333e5.css?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/bootstrap.self-5afe7e91ef3675e2be97b8d060a7f3755d6dbc615b76df476df55143da70679f.js?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/comments.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/courses.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/course_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/pages.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/professor_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/professors.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/schools.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/universities.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/assets/fontawesome-webfont-e3870de89716b72cb61a4bba0e17c75783b361cdaba35ea96961c3070bd8ca18.woff" for ::1 at 2015-05-15 13:48:43 -0600
+
+
+Started GET "/users/sign_in" for ::1 at 2015-05-15 13:48:45 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.haml (4.4ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (9.0ms)
+Completed 200 OK in 117ms (Views: 115.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2015-05-15 13:48:46 -0600
+
+
+Started GET "/users/auth/facebook" for ::1 at 2015-05-15 13:48:46 -0600
+
+
+Started GET "/users/auth/facebook/callback?code=AQAk3bmeti5z_GkAHfpODXXn6NtweaR7kCsae_oGC3v6NMz5hMiKhDVcSgQvgk5PL-g4fQdSZ0xf9_yrAwfuLCEToSV5M152Ptx869Ye7AThF3iGAivwjxM-KSehiEewOjxGYD7zjozbX0RNFoGVBmzNN-ebqWihl9o_Y211id3-AehaYwxvaU0JKhG3OD5VitxbhYsKmQH2X0nxJ7mvl82v7-kBC4AUneDtjyr-uQe0UICb28lJKrqX6FPgpeoS3AWe9DLrcUYBfshWTW0hI_rOn8WH7wuQsQ5oQjfAiBJMXu7bz7TbfOHhX9I1kS0xBpc&state=568d143343a35853c7f51ec1d8988467683807bbe73ab90c" for ::1 at 2015-05-15 13:48:47 -0600
+Processing by OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQAk3bmeti5z_GkAHfpODXXn6NtweaR7kCsae_oGC3v6NMz5hMiKhDVcSgQvgk5PL-g4fQdSZ0xf9_yrAwfuLCEToSV5M152Ptx869Ye7AThF3iGAivwjxM-KSehiEewOjxGYD7zjozbX0RNFoGVBmzNN-ebqWihl9o_Y211id3-AehaYwxvaU0JKhG3OD5VitxbhYsKmQH2X0nxJ7mvl82v7-kBC4AUneDtjyr-uQe0UICb28lJKrqX6FPgpeoS3AWe9DLrcUYBfshWTW0hI_rOn8WH7wuQsQ5oQjfAiBJMXu7bz7TbfOHhX9I1kS0xBpc", "state"=>"568d143343a35853c7f51ec1d8988467683807bbe73ab90c"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2  ORDER BY "users"."id" ASC LIMIT 1[0m  [["provider", "facebook"], ["uid", "10205621378511210"]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["last_sign_in_at", "2015-05-15 19:44:44.029753"], ["current_sign_in_at", "2015-05-15 19:48:52.859545"], ["sign_in_count", 15], ["updated_at", "2015-05-15 19:48:52.864523"], ["id", 3]]
+  [1m[35m (26.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 40ms (ActiveRecord: 28.5ms)
+
+
+Started GET "/" for ::1 at 2015-05-15 13:48:52 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.haml within layouts/application (0.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 108ms (Views: 107.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-05-15 13:50:58 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.haml within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Completed 500 Internal Server Error in 127ms
+
+ActionView::Template::Error (Missing partial shared/_flash_messages with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :haml, :jbuilder]}. Searched in:
+  * "/home/diugalde/git/UEval/app/views"
+  * "/home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/devise-3.4.1/app/views"
+  * "/home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/twitter-bootstrap-rails-3.2.0/app/views"
+):
+    37:                   %i.fa.fa-sign-in
+    38:                     Entrar
+    39:       %main
+    40:         = render partial: "shared/flash_messages", flash: flash
+    41:         = yield
+    42: 
+    43: 
+  app/views/layouts/application.html.haml:40:in `_app_views_layouts_application_html_haml___4527880102425317141_70185997107540'
+
+
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.4ms)
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.4ms)
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (14.1ms)
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (29.1ms)
+
+
+Started GET "/" for ::1 at 2015-05-15 13:51:18 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.haml within layouts/application (0.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+Completed 500 Internal Server Error in 123ms
+
+ActionView::Template::Error (Missing partial pages/_alerts, application/_alerts with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :haml, :jbuilder]}. Searched in:
+  * "/home/diugalde/git/UEval/app/views"
+  * "/home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/devise-3.4.1/app/views"
+  * "/home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/twitter-bootstrap-rails-3.2.0/app/views"
+):
+    37:                   %i.fa.fa-sign-in
+    38:                     Entrar
+    39:       %main
+    40:         = render partial: "alerts", flash: flash
+    41:         = yield
+    42: 
+    43: 
+  app/views/layouts/application.html.haml:40:in `_app_views_layouts_application_html_haml___4527880102425317141_70185988558980'
+
+
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.0ms)
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (13.2ms)
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (27.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-15 13:51:28 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.haml within layouts/application (0.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Completed 500 Internal Server Error in 122ms
+
+ActionView::Template::Error (Missing partial partials/_alerts with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :haml, :jbuilder]}. Searched in:
+  * "/home/diugalde/git/UEval/app/views"
+  * "/home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/devise-3.4.1/app/views"
+  * "/home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/twitter-bootstrap-rails-3.2.0/app/views"
+):
+    37:                   %i.fa.fa-sign-in
+    38:                     Entrar
+    39:       %main
+    40:         = render partial: "partials/alerts", flash: flash
+    41:         = yield
+    42: 
+    43: 
+  app/views/layouts/application.html.haml:40:in `_app_views_layouts_application_html_haml___4527880102425317141_70185977573480'
+
+
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.1ms)
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (13.5ms)
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/diugalde/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (27.7ms)
+
+
+Started GET "/" for ::1 at 2015-05-15 13:51:45 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.haml within layouts/application (0.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered partials/_alerts.html.haml (1.0ms)
+Completed 200 OK in 108ms (Views: 107.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.self-80c99e8cf6504adff437612417aa3c595e3b47cd82b3540c42741a963b7acf7b.css?body=1" for ::1 at 2015-05-15 13:51:45 -0600
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:51:45 -0600
+
+
+Started GET "/assets/course_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:51:45 -0600
+
+
+Started GET "/assets/professor_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:51:45 -0600
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:51:45 -0600
+
+
+Started GET "/assets/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:51:45 -0600
+
+
+Started GET "/assets/professors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:51:45 -0600
+
+
+Started GET "/assets/scaffolds.self-a3df7ad8d3aa69851334883b7e665af9edc327a3c2824ef86f3bd3e27998a25c.css?body=1" for ::1 at 2015-05-15 13:51:45 -0600
+
+
+Started GET "/assets/schools.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:51:45 -0600
+
+
+Started GET "/assets/universities.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:51:45 -0600
+
+
+Started GET "/assets/application.self-4534e4f89541150e067a26f7ea6cd362e7c0d810ab68fc9250fc8f49029333e5.css?body=1" for ::1 at 2015-05-15 13:51:45 -0600
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-15 13:51:45 -0600
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-15 13:51:45 -0600
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-05-15 13:51:45 -0600
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-05-15 13:51:45 -0600
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-05-15 13:51:45 -0600
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-05-15 13:51:45 -0600
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-05-15 13:51:45 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-05-15 13:51:45 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-05-15 13:51:45 -0600
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-05-15 13:51:45 -0600
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-05-15 13:51:45 -0600
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-05-15 13:51:45 -0600
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-05-15 13:51:45 -0600
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-05-15 13:51:45 -0600
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-15 13:51:45 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-15 13:51:45 -0600
+
+
+Started GET "/assets/bootstrap.self-5afe7e91ef3675e2be97b8d060a7f3755d6dbc615b76df476df55143da70679f.js?body=1" for ::1 at 2015-05-15 13:51:46 -0600
+
+
+Started GET "/assets/comments.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:51:46 -0600
+
+
+Started GET "/assets/course_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:51:46 -0600
+
+
+Started GET "/assets/courses.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:51:46 -0600
+
+
+Started GET "/assets/pages.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:51:46 -0600
+
+
+Started GET "/assets/professor_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:51:46 -0600
+
+
+Started GET "/assets/professors.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:51:46 -0600
+
+
+Started GET "/assets/schools.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:51:46 -0600
+
+
+Started GET "/assets/universities.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:51:46 -0600
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-15 13:51:46 -0600
+
+
+Started GET "/assets/fontawesome-webfont-e3870de89716b72cb61a4bba0e17c75783b361cdaba35ea96961c3070bd8ca18.woff" for ::1 at 2015-05-15 13:51:46 -0600
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-05-15 13:51:48 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4mLTSKHJw3mkrOaTCgdXkkw/mKys1NYYA5MJLO/e6XASRDOkWYEoWTLMMDq+MtWjil73NbyLMrteqouo9lXJgg=="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-05-15 13:51:48 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.haml within layouts/application (0.2ms)
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 121ms (Views: 120.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-05-15 13:51:55 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.haml (4.4ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (9.1ms)
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 118ms (Views: 116.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2015-05-15 13:51:57 -0600
+
+
+Started GET "/users/auth/facebook" for ::1 at 2015-05-15 13:51:57 -0600
+
+
+Started GET "/users/auth/facebook/callback?code=AQBPHYPq0gXvRsK8ZIirUkHWopZINHhPy8kkzVgRC6c9Q_jBojKLfQkGDXrO8xMQi6VxoxE4zH70pvYPAL6II-Niem_z9B4mP0VGbZA-zlwbeOa-4xipoA7pFSSRB-vAvvNwUBcq7LIt7zkxTfEIxYoAdcLJ8OlDWEzoAxBBy7p1j3GWGPY91UW5upNd_mm6fDZMUS0tz1IuDYC9p_mB3oJ_b92vnvN0SBsEvD_xB5ZHy1ZkNkdoeK6kobEweh4IVdjJ_IcnTJ7BFRHqncwNpW6McMwmTeQhSlTaZN7KcBsiZO_Tvb0ss1_gAR3wWY3V-XE&state=2ee085957dca9aec8541d682e851c5c4b80e964423cfdb9f" for ::1 at 2015-05-15 13:51:57 -0600
+Processing by OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQBPHYPq0gXvRsK8ZIirUkHWopZINHhPy8kkzVgRC6c9Q_jBojKLfQkGDXrO8xMQi6VxoxE4zH70pvYPAL6II-Niem_z9B4mP0VGbZA-zlwbeOa-4xipoA7pFSSRB-vAvvNwUBcq7LIt7zkxTfEIxYoAdcLJ8OlDWEzoAxBBy7p1j3GWGPY91UW5upNd_mm6fDZMUS0tz1IuDYC9p_mB3oJ_b92vnvN0SBsEvD_xB5ZHy1ZkNkdoeK6kobEweh4IVdjJ_IcnTJ7BFRHqncwNpW6McMwmTeQhSlTaZN7KcBsiZO_Tvb0ss1_gAR3wWY3V-XE", "state"=>"2ee085957dca9aec8541d682e851c5c4b80e964423cfdb9f"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2  ORDER BY "users"."id" ASC LIMIT 1[0m  [["provider", "facebook"], ["uid", "10205621378511210"]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["last_sign_in_at", "2015-05-15 19:48:52.859545"], ["current_sign_in_at", "2015-05-15 19:51:58.564624"], ["sign_in_count", 16], ["updated_at", "2015-05-15 19:51:58.570045"], ["id", 3]]
+  [1m[35m (785.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 801ms (ActiveRecord: 787.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-15 13:51:59 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.haml within layouts/application (0.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 107ms (Views: 106.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2015-05-15 13:52:24 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.haml within layouts/application (0.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered partials/_alerts.html.haml (0.0ms)
+Completed 200 OK in 111ms (Views: 109.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.self-80c99e8cf6504adff437612417aa3c595e3b47cd82b3540c42741a963b7acf7b.css?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/course_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/professor_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/professors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/scaffolds.self-a3df7ad8d3aa69851334883b7e665af9edc327a3c2824ef86f3bd3e27998a25c.css?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/schools.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/universities.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/application.self-4534e4f89541150e067a26f7ea6cd362e7c0d810ab68fc9250fc8f49029333e5.css?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/bootstrap.self-5afe7e91ef3675e2be97b8d060a7f3755d6dbc615b76df476df55143da70679f.js?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/comments.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/course_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/courses.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/pages.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/professor_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/professors.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/schools.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/universities.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started GET "/assets/fontawesome-webfont-e3870de89716b72cb61a4bba0e17c75783b361cdaba35ea96961c3070bd8ca18.woff" for ::1 at 2015-05-15 13:52:24 -0600
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-05-15 13:52:25 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3Unt0DQ0ifYZC29Hu9dAOOqB+R0CxlVEYMbN+/C7TVzGj6Gnpbo32WfLLrQW7CLc+bywOCe0sjluKUcrXM7Rfw=="}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2015-05-15 13:52:25 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.haml within layouts/application (0.1ms)
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 112ms (Views: 111.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-15 13:56:24 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.haml within layouts/application (0.1ms)
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 106ms (Views: 105.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.self-80c99e8cf6504adff437612417aa3c595e3b47cd82b3540c42741a963b7acf7b.css?body=1" for ::1 at 2015-05-15 13:56:24 -0600
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:56:24 -0600
+
+
+Started GET "/assets/course_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:56:24 -0600
+
+
+Started GET "/assets/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:56:24 -0600
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:56:24 -0600
+
+
+Started GET "/assets/professor_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:56:24 -0600
+
+
+Started GET "/assets/professors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:56:24 -0600
+
+
+Started GET "/assets/scaffolds.self-a3df7ad8d3aa69851334883b7e665af9edc327a3c2824ef86f3bd3e27998a25c.css?body=1" for ::1 at 2015-05-15 13:56:24 -0600
+
+
+Started GET "/assets/schools.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:56:24 -0600
+
+
+Started GET "/assets/universities.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:56:24 -0600
+
+
+Started GET "/assets/application.self-4534e4f89541150e067a26f7ea6cd362e7c0d810ab68fc9250fc8f49029333e5.css?body=1" for ::1 at 2015-05-15 13:56:24 -0600
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-15 13:56:24 -0600
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-15 13:56:24 -0600
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-05-15 13:56:24 -0600
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-05-15 13:56:24 -0600
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-05-15 13:56:24 -0600
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-05-15 13:56:24 -0600
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-05-15 13:56:25 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-05-15 13:56:25 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-05-15 13:56:25 -0600
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-05-15 13:56:25 -0600
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-05-15 13:56:25 -0600
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-05-15 13:56:25 -0600
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-05-15 13:56:25 -0600
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-05-15 13:56:25 -0600
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-15 13:56:25 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-15 13:56:25 -0600
+
+
+Started GET "/assets/bootstrap.self-5afe7e91ef3675e2be97b8d060a7f3755d6dbc615b76df476df55143da70679f.js?body=1" for ::1 at 2015-05-15 13:56:25 -0600
+
+
+Started GET "/assets/comments.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:56:25 -0600
+
+
+Started GET "/assets/course_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:56:25 -0600
+
+
+Started GET "/assets/courses.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:56:25 -0600
+
+
+Started GET "/assets/pages.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:56:25 -0600
+
+
+Started GET "/assets/professor_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:56:25 -0600
+
+
+Started GET "/assets/professors.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:56:25 -0600
+
+
+Started GET "/assets/schools.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:56:25 -0600
+
+
+Started GET "/assets/universities.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:56:25 -0600
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-15 13:56:25 -0600
+
+
+Started GET "/assets/fontawesome-webfont-e3870de89716b72cb61a4bba0e17c75783b361cdaba35ea96961c3070bd8ca18.woff" for ::1 at 2015-05-15 13:56:25 -0600
+
+
+Started GET "/users/sign_in" for ::1 at 2015-05-15 13:56:28 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.haml (4.5ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (12.1ms)
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 142ms (Views: 139.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2015-05-15 13:56:31 -0600
+
+
+Started GET "/users/auth/facebook" for ::1 at 2015-05-15 13:56:31 -0600
+
+
+Started GET "/users/auth/facebook/callback?code=AQDYMEoLSfzdGqkRd8nPP6XSN_kJZ2HaOtbU89EpMArbtHVvWw-IRcmzG-7HUMr5QiPVjUpw5DYB5lFHTcwUkGizmva0BLAPnhSAPN-u-NWD6d1IWhtWFNUZRQJ3bUUJBx6XQ-n6Lt_2bOVWJHh2WCZYxBBYQBTUtj9dscap3DWW_TRUACDYicAhzpiU3c_ekHgqUg0yJpr562_ik9S7YU2WEn-038hI6HC4RRnz5LaYp-iDo5xnaUa-YI-Rcdd4kIqwvSqflU2AG4b3_j0uKM7evdZRcvri2wQPlPtDCwZ1konJQhR1R-9yExYdKqe_C5I&state=6a7abfe5bf46d5a18b6700596a094793e55ce9e68e695814" for ::1 at 2015-05-15 13:56:31 -0600
+Processing by OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQDYMEoLSfzdGqkRd8nPP6XSN_kJZ2HaOtbU89EpMArbtHVvWw-IRcmzG-7HUMr5QiPVjUpw5DYB5lFHTcwUkGizmva0BLAPnhSAPN-u-NWD6d1IWhtWFNUZRQJ3bUUJBx6XQ-n6Lt_2bOVWJHh2WCZYxBBYQBTUtj9dscap3DWW_TRUACDYicAhzpiU3c_ekHgqUg0yJpr562_ik9S7YU2WEn-038hI6HC4RRnz5LaYp-iDo5xnaUa-YI-Rcdd4kIqwvSqflU2AG4b3_j0uKM7evdZRcvri2wQPlPtDCwZ1konJQhR1R-9yExYdKqe_C5I", "state"=>"6a7abfe5bf46d5a18b6700596a094793e55ce9e68e695814"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2  ORDER BY "users"."id" ASC LIMIT 1  [["provider", "facebook"], ["uid", "10205621378511210"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5  [["last_sign_in_at", "2015-05-15 19:51:58.564624"], ["current_sign_in_at", "2015-05-15 19:56:37.409951"], ["sign_in_count", 17], ["updated_at", "2015-05-15 19:56:37.414162"], ["id", 3]]
+  [1m[36m (14.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 25ms (ActiveRecord: 16.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-15 13:56:37 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.haml within layouts/application (0.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 109ms (Views: 108.4ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-05-15 13:56:56 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9nkGPnRYvEly6rUHVAQN96r1PIHZ92+jaJ9Il/350iybF8aGXqeyFqP2pddqI8LM0grEnjTtB9aMIpdFvfj6bg=="}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2015-05-15 13:56:56 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.haml within layouts/application (0.1ms)
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 111ms (Views: 110.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2015-05-15 13:57:09 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.haml (4.5ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (10.6ms)
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 120ms (Views: 118.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-05-15 13:57:17 -0600
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I9fWTGR5Sg131O5+6tVNe++sV7N0gmxL34zaNxUrgKxy+EMg0eXGUkhS7lXb31lI5cQSq5gzEzlGZhQHBk5TIw==", "user"=>{"email"=>"alberticopai@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'alberticopai@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["email", "alberticopai@gmail.com"], ["encrypted_password", "$2a$10$JxLIjshwQf9WYjiYhZsNB..hfZrRkTNJSLwI31nrAGJjeBbNnydOS"], ["created_at", "2015-05-15 19:57:18.053587"], ["updated_at", "2015-05-15 19:57:18.053587"]]
+  [1m[36m (16.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["last_sign_in_at", "2015-05-15 19:57:18.073801"], ["current_sign_in_at", "2015-05-15 19:57:18.073801"], ["last_sign_in_ip", "::1/128"], ["current_sign_in_ip", "::1/128"], ["sign_in_count", 1], ["updated_at", "2015-05-15 19:57:18.076587"], ["id", 5]]
+  [1m[35m (9.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 113ms (ActiveRecord: 28.6ms)
+
+
+Started GET "/" for ::1 at 2015-05-15 13:57:18 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.haml within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 123ms (Views: 121.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/edit" for ::1 at 2015-05-15 13:57:37 -0600
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  Rendered devise/registrations/edit.html.haml within layouts/application (5.6ms)
+  Rendered partials/_alerts.html.haml (1.1ms)
+Completed 200 OK in 116ms (Views: 114.6ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/users" for ::1 at 2015-05-15 13:57:39 -0600
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a3KpbwnkIqf7NJboP3SkJUEIvczlYvWC5LdaJZCKzyI6XTwDvHiu+MSylsMOfrAWS2D41AnTivB9XZQVg+8crQ==", "user"=>{"email"=>"alberticopai@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered devise/registrations/edit.html.haml within layouts/application (6.3ms)
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 190ms (Views: 116.5ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/users" for ::1 at 2015-05-15 13:59:01 -0600
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a3KpbwnkIqf7NJboP3SkJUEIvczlYvWC5LdaJZCKzyI6XTwDvHiu+MSylsMOfrAWS2D41AnTivB9XZQVg+8crQ==", "user"=>{"email"=>"alberticopai@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered devise/registrations/edit.html.haml within layouts/application (5.8ms)
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 214ms (Views: 126.7ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.self-80c99e8cf6504adff437612417aa3c595e3b47cd82b3540c42741a963b7acf7b.css?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/course_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/professor_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/professors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/schools.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/scaffolds.self-a3df7ad8d3aa69851334883b7e665af9edc327a3c2824ef86f3bd3e27998a25c.css?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/universities.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/application.self-4534e4f89541150e067a26f7ea6cd362e7c0d810ab68fc9250fc8f49029333e5.css?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/bootstrap.self-5afe7e91ef3675e2be97b8d060a7f3755d6dbc615b76df476df55143da70679f.js?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/comments.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/course_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/courses.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/pages.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/professor_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/professors.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/schools.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/universities.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started GET "/assets/fontawesome-webfont-e3870de89716b72cb61a4bba0e17c75783b361cdaba35ea96961c3070bd8ca18.woff" for ::1 at 2015-05-15 13:59:02 -0600
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-05-15 13:59:03 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yBIVstuWHg20ZW97tEdqvCcn3FUhTSPOVjWsYubS13iZPYDebgqSUovjb1CFTX6PLU+ZTc38XLzP32JS9bcE9w=="}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-05-15 13:59:03 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.haml within layouts/application (0.1ms)
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 111ms (Views: 110.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-15 13:59:22 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.haml within layouts/application (0.1ms)
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 111ms (Views: 110.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.self-80c99e8cf6504adff437612417aa3c595e3b47cd82b3540c42741a963b7acf7b.css?body=1" for ::1 at 2015-05-15 13:59:22 -0600
+
+
+Started GET "/assets/professor_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:59:22 -0600
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/course_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/professors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/scaffolds.self-a3df7ad8d3aa69851334883b7e665af9edc327a3c2824ef86f3bd3e27998a25c.css?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/schools.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/universities.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/application.self-4534e4f89541150e067a26f7ea6cd362e7c0d810ab68fc9250fc8f49029333e5.css?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/bootstrap.self-5afe7e91ef3675e2be97b8d060a7f3755d6dbc615b76df476df55143da70679f.js?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/comments.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/course_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/courses.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/pages.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/professor_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/professors.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/schools.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/universities.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/assets/fontawesome-webfont-e3870de89716b72cb61a4bba0e17c75783b361cdaba35ea96961c3070bd8ca18.woff" for ::1 at 2015-05-15 13:59:23 -0600
+
+
+Started GET "/users/sign_in" for ::1 at 2015-05-15 13:59:24 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.haml (4.6ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (8.8ms)
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 142ms (Views: 128.4ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2015-05-15 13:59:25 -0600
+
+
+Started GET "/users/auth/facebook" for ::1 at 2015-05-15 13:59:26 -0600
+
+
+Started GET "/users/auth/facebook/callback?code=AQCiMsWdqaBK7u1_yRKZz_FOoSG581hDauSFU5dt_nOtHtAEOBbAHfWXgYWCuFp9FK9jiZtPq8_DMVra-ADsJu-rsi03Ln8tN2AWHWNFHXFnIEBzQrvqsQoCm4j1MJK-t83ScOcxEUqhpxT01SN9FoAgzRtu6aeLdb9ePoWVQ9CGwua_z7lGYbV8KgQYRwNl0T09mJ5R5smrQAttuLvOEfSonq4VrPB85QxMPdKu7_92F8-AoHeo5eHFeU_Hky3ycQYZM7hqavlg_JIF8UkM0ZFHYG9R_WoCVZRe4UXzuF6N-ElVXZ__RBUCCqv6GzbQgls&state=d68fc633055058d7c0ea786ea462c076f070c90f6fca91cc" for ::1 at 2015-05-15 13:59:26 -0600
+Processing by OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQCiMsWdqaBK7u1_yRKZz_FOoSG581hDauSFU5dt_nOtHtAEOBbAHfWXgYWCuFp9FK9jiZtPq8_DMVra-ADsJu-rsi03Ln8tN2AWHWNFHXFnIEBzQrvqsQoCm4j1MJK-t83ScOcxEUqhpxT01SN9FoAgzRtu6aeLdb9ePoWVQ9CGwua_z7lGYbV8KgQYRwNl0T09mJ5R5smrQAttuLvOEfSonq4VrPB85QxMPdKu7_92F8-AoHeo5eHFeU_Hky3ycQYZM7hqavlg_JIF8UkM0ZFHYG9R_WoCVZRe4UXzuF6N-ElVXZ__RBUCCqv6GzbQgls", "state"=>"d68fc633055058d7c0ea786ea462c076f070c90f6fca91cc"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2  ORDER BY "users"."id" ASC LIMIT 1  [["provider", "facebook"], ["uid", "10205621378511210"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5  [["last_sign_in_at", "2015-05-15 19:56:37.409951"], ["current_sign_in_at", "2015-05-15 19:59:27.207602"], ["sign_in_count", 18], ["updated_at", "2015-05-15 19:59:27.209503"], ["id", 3]]
+  [1m[36m (12.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 20ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-15 13:59:27 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.haml within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 112ms (Views: 111.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-15 14:01:38 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.haml within layouts/application (0.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 160ms (Views: 158.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.self-80c99e8cf6504adff437612417aa3c595e3b47cd82b3540c42741a963b7acf7b.css?body=1" for ::1 at 2015-05-15 14:01:38 -0600
+
+
+Started GET "/assets/course_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:01:38 -0600
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:01:38 -0600
+
+
+Started GET "/assets/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:01:38 -0600
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:01:38 -0600
+
+
+Started GET "/assets/professor_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:01:38 -0600
+
+
+Started GET "/assets/professors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:01:38 -0600
+
+
+Started GET "/assets/scaffolds.self-a3df7ad8d3aa69851334883b7e665af9edc327a3c2824ef86f3bd3e27998a25c.css?body=1" for ::1 at 2015-05-15 14:01:38 -0600
+
+
+Started GET "/assets/schools.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:01:38 -0600
+
+
+Started GET "/assets/universities.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:01:38 -0600
+
+
+Started GET "/assets/application.self-4b9f755cb8ea8435b62fa1ef09766b3c369f2623b226a7c4cdfc4bb8787950ea.css?body=1" for ::1 at 2015-05-15 14:01:38 -0600
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-15 14:01:38 -0600
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-15 14:01:38 -0600
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-05-15 14:01:38 -0600
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-05-15 14:01:38 -0600
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-05-15 14:01:38 -0600
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-05-15 14:01:38 -0600
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-05-15 14:01:38 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-05-15 14:01:38 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-05-15 14:01:38 -0600
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-05-15 14:01:38 -0600
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-05-15 14:01:38 -0600
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-05-15 14:01:38 -0600
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-05-15 14:01:38 -0600
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-05-15 14:01:38 -0600
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-15 14:01:38 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-15 14:01:38 -0600
+
+
+Started GET "/assets/bootstrap.self-5afe7e91ef3675e2be97b8d060a7f3755d6dbc615b76df476df55143da70679f.js?body=1" for ::1 at 2015-05-15 14:01:38 -0600
+
+
+Started GET "/assets/comments.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:01:38 -0600
+
+
+Started GET "/assets/course_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:01:38 -0600
+
+
+Started GET "/assets/courses.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:01:38 -0600
+
+
+Started GET "/assets/pages.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:01:38 -0600
+
+
+Started GET "/assets/professor_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:01:39 -0600
+
+
+Started GET "/assets/professors.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:01:39 -0600
+
+
+Started GET "/assets/schools.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:01:39 -0600
+
+
+Started GET "/assets/universities.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:01:39 -0600
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-15 14:01:39 -0600
+
+
+Started GET "/assets/fontawesome-webfont-e3870de89716b72cb61a4bba0e17c75783b361cdaba35ea96961c3070bd8ca18.woff" for ::1 at 2015-05-15 14:01:39 -0600
+
+
+Started GET "/" for ::1 at 2015-05-15 14:01:44 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.haml within layouts/application (0.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 142ms (Views: 141.1ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-05-15 14:01:46 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UyVct6EHcmtNEwC93n/JZbLc4hMVl4APs4ViHRoCWcT5N5tOcUi+LdBUP0N1xgB7iRsTw6sjGlO0geIlpevnxA=="}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2015-05-15 14:01:46 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.haml within layouts/application (0.1ms)
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 117ms (Views: 115.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2015-05-15 14:01:54 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.haml (3.0ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (6.7ms)
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 147ms (Views: 146.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-05-15 14:02:00 -0600
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xCy2bgMnRkfVvNRD8Dz1sAn16Dg34kPvvI2Rg/gm65RuPykHc+ls5yKzhLoPTVFuIxu754Dixr+rBKiD8CmZzA==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered devise/shared/_links.html.haml (3.1ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (8.6ms)
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 202ms (Views: 128.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-05-15 14:02:12 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.haml (5.1ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (10.5ms)
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 121ms (Views: 119.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2015-05-15 14:02:15 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ox+oGJXj3EZ2EO0SNiMmcJ/S0jfh/TAwATVnhmpBWTiRDDdx5S325oEfvevJUoKutTyB6Fb9tWAWvF6GYk4rYA==", "user"=>{"email"=>"alberticopai@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["email", "alberticopai@gmail.com"]]
+Completed 401 Unauthorized in 70ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ox+oGJXj3EZ2EO0SNiMmcJ/S0jfh/TAwATVnhmpBWTiRDDdx5S325oEfvevJUoKutTyB6Fb9tWAWvF6GYk4rYA==", "user"=>{"email"=>"alberticopai@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered devise/shared/_links.html.haml (4.6ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (9.2ms)
+  Rendered partials/_alerts.html.haml (0.2ms)
+Completed 200 OK in 180ms (Views: 114.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2015-05-15 14:04:06 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ox+oGJXj3EZ2EO0SNiMmcJ/S0jfh/TAwATVnhmpBWTiRDDdx5S325oEfvevJUoKutTyB6Fb9tWAWvF6GYk4rYA==", "user"=>{"email"=>"alberticopai@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "alberticopai@gmail.com"]]
+Completed 401 Unauthorized in 79ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ox+oGJXj3EZ2EO0SNiMmcJ/S0jfh/TAwATVnhmpBWTiRDDdx5S325oEfvevJUoKutTyB6Fb9tWAWvF6GYk4rYA==", "user"=>{"email"=>"alberticopai@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered devise/shared/_links.html.haml (4.4ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (8.3ms)
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 196ms (Views: 130.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.self-80c99e8cf6504adff437612417aa3c595e3b47cd82b3540c42741a963b7acf7b.css?body=1" for ::1 at 2015-05-15 14:04:06 -0600
+
+
+Started GET "/assets/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:04:06 -0600
+
+
+Started GET "/assets/course_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:04:06 -0600
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:04:06 -0600
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:04:06 -0600
+
+
+Started GET "/assets/professor_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:04:06 -0600
+
+
+Started GET "/assets/professors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:04:06 -0600
+
+
+Started GET "/assets/schools.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:04:06 -0600
+
+
+Started GET "/assets/scaffolds.self-a3df7ad8d3aa69851334883b7e665af9edc327a3c2824ef86f3bd3e27998a25c.css?body=1" for ::1 at 2015-05-15 14:04:06 -0600
+
+
+Started GET "/assets/universities.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:04:06 -0600
+
+
+Started GET "/assets/application.self-4b9f755cb8ea8435b62fa1ef09766b3c369f2623b226a7c4cdfc4bb8787950ea.css?body=1" for ::1 at 2015-05-15 14:04:06 -0600
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-15 14:04:06 -0600
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-15 14:04:06 -0600
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-05-15 14:04:06 -0600
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-05-15 14:04:06 -0600
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-05-15 14:04:06 -0600
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-05-15 14:04:06 -0600
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-05-15 14:04:06 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-05-15 14:04:06 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-05-15 14:04:06 -0600
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-05-15 14:04:06 -0600
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-05-15 14:04:06 -0600
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-05-15 14:04:06 -0600
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-05-15 14:04:06 -0600
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-05-15 14:04:06 -0600
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-15 14:04:06 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-15 14:04:06 -0600
+
+
+Started GET "/assets/bootstrap.self-5afe7e91ef3675e2be97b8d060a7f3755d6dbc615b76df476df55143da70679f.js?body=1" for ::1 at 2015-05-15 14:04:06 -0600
+
+
+Started GET "/assets/comments.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:04:07 -0600
+
+
+Started GET "/assets/course_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:04:07 -0600
+
+
+Started GET "/assets/courses.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:04:07 -0600
+
+
+Started GET "/assets/pages.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:04:07 -0600
+
+
+Started GET "/assets/professor_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:04:07 -0600
+
+
+Started GET "/assets/professors.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:04:07 -0600
+
+
+Started GET "/assets/schools.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:04:07 -0600
+
+
+Started GET "/assets/universities.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:04:07 -0600
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-15 14:04:07 -0600
+
+
+Started GET "/assets/fontawesome-webfont-e3870de89716b72cb61a4bba0e17c75783b361cdaba35ea96961c3070bd8ca18.woff" for ::1 at 2015-05-15 14:04:07 -0600
+
+
+Started GET "/users/sign_up" for ::1 at 2015-05-15 14:04:10 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.haml (3.0ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (6.6ms)
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 114ms (Views: 112.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-05-15 14:04:12 -0600
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mmPnZ9O2NTBjOqRbN4VhaDINFdxJUEOtWLvrdAy1PaIwcHgOo3gfkJQ19KLI9MW2GONGA/5Qxv1PMtJ0BLpP+g==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered devise/shared/_links.html.haml (3.0ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (8.3ms)
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 118ms (Views: 107.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2015-05-15 14:05:05 -0600
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mmPnZ9O2NTBjOqRbN4VhaDINFdxJUEOtWLvrdAy1PaIwcHgOo3gfkJQ19KLI9MW2GONGA/5Qxv1PMtJ0BLpP+g==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered devise/shared/_links.html.haml (5.1ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (10.3ms)
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 147ms (Views: 128.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.self-80c99e8cf6504adff437612417aa3c595e3b47cd82b3540c42741a963b7acf7b.css?body=1" for ::1 at 2015-05-15 14:05:05 -0600
+
+
+Started GET "/assets/course_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:05:05 -0600
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:05:05 -0600
+
+
+Started GET "/assets/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:05:05 -0600
+
+
+Started GET "/assets/professor_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:05:05 -0600
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:05:05 -0600
+
+
+Started GET "/assets/professors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:05:05 -0600
+
+
+Started GET "/assets/scaffolds.self-a3df7ad8d3aa69851334883b7e665af9edc327a3c2824ef86f3bd3e27998a25c.css?body=1" for ::1 at 2015-05-15 14:05:05 -0600
+
+
+Started GET "/assets/schools.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:05:05 -0600
+
+
+Started GET "/assets/universities.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:05:05 -0600
+
+
+Started GET "/assets/application.self-4b9f755cb8ea8435b62fa1ef09766b3c369f2623b226a7c4cdfc4bb8787950ea.css?body=1" for ::1 at 2015-05-15 14:05:05 -0600
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-15 14:05:05 -0600
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-15 14:05:05 -0600
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-05-15 14:05:05 -0600
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-05-15 14:05:05 -0600
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-05-15 14:05:05 -0600
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-05-15 14:05:05 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-05-15 14:05:05 -0600
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-05-15 14:05:05 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-05-15 14:05:05 -0600
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-05-15 14:05:05 -0600
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-05-15 14:05:05 -0600
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-05-15 14:05:05 -0600
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-05-15 14:05:05 -0600
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-05-15 14:05:05 -0600
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-15 14:05:05 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-15 14:05:05 -0600
+
+
+Started GET "/assets/bootstrap.self-5afe7e91ef3675e2be97b8d060a7f3755d6dbc615b76df476df55143da70679f.js?body=1" for ::1 at 2015-05-15 14:05:05 -0600
+
+
+Started GET "/assets/comments.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:05:05 -0600
+
+
+Started GET "/assets/course_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:05:05 -0600
+
+
+Started GET "/assets/courses.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:05:05 -0600
+
+
+Started GET "/assets/pages.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:05:06 -0600
+
+
+Started GET "/assets/professor_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:05:06 -0600
+
+
+Started GET "/assets/professors.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:05:06 -0600
+
+
+Started GET "/assets/schools.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:05:06 -0600
+
+
+Started GET "/assets/universities.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:05:06 -0600
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-15 14:05:06 -0600
+
+
+Started GET "/assets/fontawesome-webfont-e3870de89716b72cb61a4bba0e17c75783b361cdaba35ea96961c3070bd8ca18.woff" for ::1 at 2015-05-15 14:05:06 -0600
+
+
+Started POST "/users" for ::1 at 2015-05-15 14:05:29 -0600
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mmPnZ9O2NTBjOqRbN4VhaDINFdxJUEOtWLvrdAy1PaIwcHgOo3gfkJQ19KLI9MW2GONGA/5Qxv1PMtJ0BLpP+g==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered devise/shared/_links.html.haml (3.3ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (7.9ms)
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 137ms (Views: 113.3ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.self-80c99e8cf6504adff437612417aa3c595e3b47cd82b3540c42741a963b7acf7b.css?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/course_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/professor_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/professors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/scaffolds.self-a3df7ad8d3aa69851334883b7e665af9edc327a3c2824ef86f3bd3e27998a25c.css?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/schools.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/universities.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/application.self-4b9f755cb8ea8435b62fa1ef09766b3c369f2623b226a7c4cdfc4bb8787950ea.css?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/bootstrap.self-5afe7e91ef3675e2be97b8d060a7f3755d6dbc615b76df476df55143da70679f.js?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/comments.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/course_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/courses.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/pages.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/professor_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/professors.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/schools.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/universities.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started GET "/assets/fontawesome-webfont-e3870de89716b72cb61a4bba0e17c75783b361cdaba35ea96961c3070bd8ca18.woff" for ::1 at 2015-05-15 14:05:29 -0600
+
+
+Started POST "/users" for ::1 at 2015-05-15 14:06:44 -0600
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mmPnZ9O2NTBjOqRbN4VhaDINFdxJUEOtWLvrdAy1PaIwcHgOo3gfkJQ19KLI9MW2GONGA/5Qxv1PMtJ0BLpP+g==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered devise/shared/_links.html.haml (3.0ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (10.3ms)
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 125ms (Views: 117.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.self-80c99e8cf6504adff437612417aa3c595e3b47cd82b3540c42741a963b7acf7b.css?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/course_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/professor_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/professors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/scaffolds.self-a3df7ad8d3aa69851334883b7e665af9edc327a3c2824ef86f3bd3e27998a25c.css?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/schools.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/universities.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/application.self-4b9f755cb8ea8435b62fa1ef09766b3c369f2623b226a7c4cdfc4bb8787950ea.css?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/bootstrap.self-5afe7e91ef3675e2be97b8d060a7f3755d6dbc615b76df476df55143da70679f.js?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/comments.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/course_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/courses.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/pages.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/professor_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/professors.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/schools.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/universities.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started GET "/assets/fontawesome-webfont-e3870de89716b72cb61a4bba0e17c75783b361cdaba35ea96961c3070bd8ca18.woff" for ::1 at 2015-05-15 14:06:44 -0600
+
+
+Started POST "/users" for ::1 at 2015-05-15 14:07:04 -0600
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mmPnZ9O2NTBjOqRbN4VhaDINFdxJUEOtWLvrdAy1PaIwcHgOo3gfkJQ19KLI9MW2GONGA/5Qxv1PMtJ0BLpP+g==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered devise/shared/_links.html.haml (3.1ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (7.8ms)
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 154ms (Views: 135.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:07:04 -0600
+
+
+Started GET "/assets/bootstrap_and_overrides.self-80c99e8cf6504adff437612417aa3c595e3b47cd82b3540c42741a963b7acf7b.css?body=1" for ::1 at 2015-05-15 14:07:04 -0600
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:07:04 -0600
+
+
+Started GET "/assets/professor_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:07:04 -0600
+
+
+Started GET "/assets/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:07:04 -0600
+
+
+Started GET "/assets/course_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:07:04 -0600
+
+
+Started GET "/assets/scaffolds.self-a3df7ad8d3aa69851334883b7e665af9edc327a3c2824ef86f3bd3e27998a25c.css?body=1" for ::1 at 2015-05-15 14:07:04 -0600
+
+
+Started GET "/assets/professors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:07:04 -0600
+
+
+Started GET "/assets/schools.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:07:04 -0600
+
+
+Started GET "/assets/universities.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:07:04 -0600
+
+
+Started GET "/assets/application.self-4b9f755cb8ea8435b62fa1ef09766b3c369f2623b226a7c4cdfc4bb8787950ea.css?body=1" for ::1 at 2015-05-15 14:07:04 -0600
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-15 14:07:04 -0600
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-15 14:07:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-05-15 14:07:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-05-15 14:07:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-05-15 14:07:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-05-15 14:07:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-05-15 14:07:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-05-15 14:07:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-05-15 14:07:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-05-15 14:07:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-05-15 14:07:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-05-15 14:07:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-05-15 14:07:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-05-15 14:07:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-15 14:07:04 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-15 14:07:04 -0600
+
+
+Started GET "/assets/bootstrap.self-5afe7e91ef3675e2be97b8d060a7f3755d6dbc615b76df476df55143da70679f.js?body=1" for ::1 at 2015-05-15 14:07:05 -0600
+
+
+Started GET "/assets/comments.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:07:05 -0600
+
+
+Started GET "/assets/course_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:07:05 -0600
+
+
+Started GET "/assets/courses.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:07:05 -0600
+
+
+Started GET "/assets/pages.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:07:05 -0600
+
+
+Started GET "/assets/professor_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:07:05 -0600
+
+
+Started GET "/assets/professors.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:07:05 -0600
+
+
+Started GET "/assets/schools.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:07:05 -0600
+
+
+Started GET "/assets/universities.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:07:05 -0600
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-15 14:07:05 -0600
+
+
+Started GET "/assets/fontawesome-webfont-e3870de89716b72cb61a4bba0e17c75783b361cdaba35ea96961c3070bd8ca18.woff" for ::1 at 2015-05-15 14:07:05 -0600
+
+
+Started POST "/users" for ::1 at 2015-05-15 14:11:10 -0600
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mmPnZ9O2NTBjOqRbN4VhaDINFdxJUEOtWLvrdAy1PaIwcHgOo3gfkJQ19KLI9MW2GONGA/5Qxv1PMtJ0BLpP+g==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered devise/shared/_links.html.haml (4.0ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (9.4ms)
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 128ms (Views: 120.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/course_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/bootstrap_and_overrides.self-80c99e8cf6504adff437612417aa3c595e3b47cd82b3540c42741a963b7acf7b.css?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/professor_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/professors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/scaffolds.self-a3df7ad8d3aa69851334883b7e665af9edc327a3c2824ef86f3bd3e27998a25c.css?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/schools.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/universities.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/application.self-4b9f755cb8ea8435b62fa1ef09766b3c369f2623b226a7c4cdfc4bb8787950ea.css?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/bootstrap.self-5afe7e91ef3675e2be97b8d060a7f3755d6dbc615b76df476df55143da70679f.js?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/comments.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/course_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/pages.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/courses.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/professor_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/professors.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/schools.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/universities.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started GET "/assets/fontawesome-webfont-e3870de89716b72cb61a4bba0e17c75783b361cdaba35ea96961c3070bd8ca18.woff" for ::1 at 2015-05-15 14:11:10 -0600
+
+
+Started POST "/users" for ::1 at 2015-05-15 14:11:13 -0600
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D+srnTO+aAYqtLcAkRs3hcUaXClQICPXqfUV3xbyclKl+LT0Q3BCpt275/luapNb7/QP9ucgpoe+fCzfHv0ACg==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered devise/shared/_links.html.haml (3.3ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (9.3ms)
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 141ms (Views: 128.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-05-15 14:11:21 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.haml (4.7ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (10.8ms)
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 118ms (Views: 117.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2015-05-15 14:11:24 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rsTtXy0dSICWMttj8O+yVrwtL8gbP39u6rAO3zqgP+cE13I2XdNiIGE9i5oPnhaIlsN8F6w/+j79OTffMq9Nvw==", "user"=>{"email"=>"alberticopai@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["email", "alberticopai@gmail.com"]]
+Completed 401 Unauthorized in 70ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rsTtXy0dSICWMttj8O+yVrwtL8gbP39u6rAO3zqgP+cE13I2XdNiIGE9i5oPnhaIlsN8F6w/+j79OTffMq9Nvw==", "user"=>{"email"=>"alberticopai@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered devise/shared/_links.html.haml (4.3ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (9.0ms)
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 181ms (Views: 115.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2015-05-15 14:12:05 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rsTtXy0dSICWMttj8O+yVrwtL8gbP39u6rAO3zqgP+cE13I2XdNiIGE9i5oPnhaIlsN8F6w/+j79OTffMq9Nvw==", "user"=>{"email"=>"alberticopai@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "alberticopai@gmail.com"]]
+Completed 401 Unauthorized in 75ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rsTtXy0dSICWMttj8O+yVrwtL8gbP39u6rAO3zqgP+cE13I2XdNiIGE9i5oPnhaIlsN8F6w/+j79OTffMq9Nvw==", "user"=>{"email"=>"alberticopai@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered devise/shared/_links.html.haml (4.5ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (8.7ms)
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 184ms (Views: 118.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.self-80c99e8cf6504adff437612417aa3c595e3b47cd82b3540c42741a963b7acf7b.css?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/course_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/professor_evaluations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/professors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/scaffolds.self-a3df7ad8d3aa69851334883b7e665af9edc327a3c2824ef86f3bd3e27998a25c.css?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/schools.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/universities.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/application.self-4b9f755cb8ea8435b62fa1ef09766b3c369f2623b226a7c4cdfc4bb8787950ea.css?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/bootstrap.self-5afe7e91ef3675e2be97b8d060a7f3755d6dbc615b76df476df55143da70679f.js?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/comments.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/course_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/courses.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/pages.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/professor_evaluations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/professors.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/schools.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/universities.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/assets/fontawesome-webfont-e3870de89716b72cb61a4bba0e17c75783b361cdaba35ea96961c3070bd8ca18.woff" for ::1 at 2015-05-15 14:12:06 -0600
+
+
+Started GET "/users/sign_up" for ::1 at 2015-05-15 14:12:07 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.haml (3.1ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (6.6ms)
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 118ms (Views: 116.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-05-15 14:12:09 -0600
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9XYreKRBt1h/+7F/nJ+zcHrNv1kLozwwiNvRlbB84cVfZbQR1I+d+Ij04YZj7heuUCPshryjuWCfUuiVuHOTnQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered devise/shared/_links.html.haml (3.1ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (8.4ms)
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 125ms (Views: 117.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2015-05-15 14:12:14 -0600
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lSVHP7X/BGhEGTWkLqGd03ORVbZLWvcntLsNiLdO9Js/NthWxTEuyLMWZV3R0DkNWX8GafxacnejMjSIv0GGww==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered devise/shared/_links.html.haml (3.0ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (8.3ms)
+  Rendered partials/_alerts.html.haml (0.1ms)
+Completed 200 OK in 128ms (Views: 118.5ms | ActiveRecord: 0.5ms)

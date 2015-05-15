@@ -35,6 +35,10 @@ html, body {
     position: relative;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 /*General styles  -  End*/
 
 /*-----------------------------------------------------------------------------------*/
