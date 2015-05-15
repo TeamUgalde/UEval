@@ -214,7 +214,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   devise
-  font-awesome-rails
+  font-awesome-rails (~> 4.3.0)
   haml-rails
   jbuilder (~> 2.0)
   jquery-rails

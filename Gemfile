@@ -47,7 +47,7 @@ gem "therubyracer"
 gem "less-rails"
 
 # Use FontAwesome styles
-gem "font-awesome-rails"
+gem "font-awesome-rails", '~> 4.3.0'
 
 #Use haml instead of erb
 gem "haml-rails"
