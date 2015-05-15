@@ -9,7 +9,7 @@
     = f.label :password
     - if @validatable
       %em
-        (#{@minimum_password_length} characters minimum)
+        (Tamaño #{@minimum_password_length} como mínimo)
     %br/
     = f.password_field :password, autocomplete: "off"
   .field

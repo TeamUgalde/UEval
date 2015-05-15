@@ -17,7 +17,6 @@
 
 /*General styles*/
 
-
 html, body {
     box-sizing: border-box !important;
     margin:0 !important;
@@ -39,6 +38,10 @@ a {
   text-decoration: none !important;
 }
 
+li {
+    list-style-type: square;
+}
+
 /*General styles  -  End*/
 
 /*-----------------------------------------------------------------------------------*/
@@ -53,8 +56,6 @@ a {
     margin-top: 20px;
     color: #f1f1f1;
 }
-
-
 
 /*Styles for the top navbar  -  End*/
 
@@ -72,3 +73,4 @@ a {
     margin-top: 15px;
 }
 
+/*Styles for the footer navbar  -  End*/
