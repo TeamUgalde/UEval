@@ -4,7 +4,8 @@ class ProfessorsController < ApplicationController
   # GET /professors
   # GET /professors.json
   def index
-    @professors = Professor.all
+    school = School.find(params[:school_id])
+    @professors = school.professors
   end
 
   # GET /professors/1
@@ -28,11 +29,11 @@ class ProfessorsController < ApplicationController
 
     respond_to do |format|
       if @professor.save
-        format.html { redirect_to @professor, notice: 'Professor was successfully created.' }
+        format.html { redirect_to school_professors_path, notice: 'Professor was successfully created.' }
         format.json { render :show, status: :created, location: @professor }
       else
         format.html { render :new }
-        format.json { render json: @professor.errors, status: :unprocessable_entity }
+        format.json { render json: school_professors_path.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -54,9 +55,10 @@ class ProfessorsController < ApplicationController
   # DELETE /professors/1
   # DELETE /professors/1.json
   def destroy
+    path = "/schools/#{@professor.school_id}/professors"
     @professor.destroy
     respond_to do |format|
-      format.html { redirect_to professors_url, notice: 'Professor was successfully destroyed.' }
+      format.html { redirect_to path, notice: 'Professor was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
