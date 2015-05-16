@@ -7,35 +7,42 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    %header#main-top-bar.navbar.navbar-static-top.navbar-default
-      .container
-        %h1.pull-left.navbar-logo
-          = link_to '/', :class => 'navbar-link' do
-            %i.fa.fa-check-circle-o
-              UEval
-        %div.navbar-links-container.pull-right
-          - if user_signed_in?
-            %strong.pull-right
-              Usuario:
-              = current_user.email
-            %div.clear
-            %div.pull-right
-              = link_to edit_user_registration_path, :class => 'navbar-link' do
-                %i.fa.fa-user
-                  Mi Perfil
-              = link_to destroy_user_session_path, method: :delete, :class => 'navbar-link' do
-                %i.fa.fa-sign-out
-                  Salir
-          - else
-            = link_to "Registrarse", new_user_registration_path, :class => 'navbar-link'
-            |
-            \#{link_to "Entrar", new_user_session_path, :class => 'navbar-link'}
-            %br/
-            = link_to "Entrar con Facebook", user_omniauth_authorize_path(:facebook)
-    %main
-      = yield
-    #footerNav.navbar-default.navbar-bottom
-      .container
-        %strong#footerCopyright.muted.pull-right
-          = link_to '', :class => 'navbar-link' do
-            &copy; Created by UTeam
+    %div#body-container
+      %header
+        %nav.navbar.navbar-static-top.navbar-default
+          .container.navbar-container
+            %h3.pull-left.navbar-logo
+              = link_to root_url, :class => 'navbar-link' do
+                %i.fa.fa-check-circle-o
+                  UEval
+            %div.navbar-links-container.pull-right
+              - if user_signed_in?
+                %strong.pull-right
+                  Usuario:
+                  = current_user.email
+                %div.clear
+                %div.pull-right
+                  = link_to edit_user_registration_path, :class => 'navbar-link' do
+                    %i.fa.fa-user
+                      Mi Perfil
+                  = link_to destroy_user_session_path, method: :delete, :class => 'navbar-link' do
+                    %i.fa.fa-sign-out
+                      Salir
+              - else
+                = link_to new_user_registration_path, :class => 'navbar-link enter-link', data: { toggle: "modal", target: "#nav-modal" }, remote: true do
+                  %i.fa.fa-plus
+                    Registrarse
+                |
+                = link_to new_user_session_path, :class => 'navbar-link enter-link', data: { toggle: "modal", target: "#nav-modal" }, remote: true do
+                  %i.fa.fa-sign-in
+                    Entrar
+      %main.main-container
+        = render partial: "partials/alerts", flash: flash
+        = render partial: "partials/navmodal", flash: flash
+        = yield
+
+      %footer.footer
+        %nav.navbar.navbar-default
+          .container
+            %h4.pull-right#sign
+              &copy; Created by UTeam

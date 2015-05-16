@@ -60,6 +60,7 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    devise-bootstrap-views (0.0.5)
     erubis (2.7.0)
     execjs (2.5.2)
     faraday (0.9.1)
@@ -214,7 +215,8 @@ PLATFORMS
 DEPENDENCIES
   byebug
   devise
-  font-awesome-rails
+  devise-bootstrap-views
+  font-awesome-rails (~> 4.3.0)
   haml-rails
   jbuilder (~> 2.0)
   jquery-rails

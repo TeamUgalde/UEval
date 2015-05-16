@@ -17,50 +17,72 @@
 
 /*General styles*/
 
-body {
+html, body {
+    box-sizing: border-box !important;
+    margin:0 !important;
+    padding:0 !important;
+    height:100% !important;
     background-color: #F1F1F1;
-}
-
-* {
-    box-sizing: border-box;
 }
 
 .clear {
     clear: both;
 }
 
+#body-container{
+    min-height: 100%;
+    position: relative;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+li {
+    list-style-type: square;
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px floralwhite inset !important;
+}
 /*General styles  -  End*/
 
 /*-----------------------------------------------------------------------------------*/
-
 /*Styles for the top navbar*/
 
 .navbar-link {
     padding-left: 20px;
+    padding-right: 20px;
 }
 
 .navbar-links-container {
-    margin-top: 15px;
+    margin-top: 20px;
+    color: #f1f1f1;
 }
 
 /*Styles for the top navbar  -  End*/
 
 /*-----------------------------------------------------------------------------------*/
-
 /*Styles for the footer navbar*/
 
-#footerCopyright {
-    margin-top: 20px;
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #f1f1f1;
 }
 
-#footerNav {
-    color: white;
-    font-size: 120%;
-    height: 55px;
-    margin:0;
-    border: none;
-    border-radius: none;
+#sign {
+    margin-top: 15px;
 }
 
 /*Styles for the footer navbar  -  End*/
 
+
+.margin-right-10 {
+    margin-right: 10px;
+}
+
+.main-container {
+    padding: 10px;
+}

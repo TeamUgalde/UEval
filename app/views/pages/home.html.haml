@@ -1,2 +1,12 @@
-%h1 Pages#home
-%p Find me in app/views/pages/home.html.haml
+%section#universities-container
+
+:javascript
+  $.ajax({
+      url: "/universities",
+      async: true,
+      success: function(html){
+        $("#universities-container").html(html);
+      }
+  });
+
+
