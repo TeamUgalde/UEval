@@ -5,6 +5,7 @@ class UniversitiesController < ApplicationController
   # GET /universities.json
   def index
     @universities = University.all
+    render :layout => false
   end
 
   # GET /universities/1

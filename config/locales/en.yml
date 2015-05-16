@@ -5,6 +5,7 @@ en:
         email: "Correo electrónico"
         password: "Contraseña"
         password_confirmation: "Confirmar contraseña"
+        current_password: "Contraseña actual"
     errors:
       messages:
         taken: " ya ha sido registrado."

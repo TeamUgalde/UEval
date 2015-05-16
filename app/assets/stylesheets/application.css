@@ -42,6 +42,9 @@ li {
     list-style-type: square;
 }
 
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px floralwhite inset !important;
+}
 /*General styles  -  End*/
 
 /*-----------------------------------------------------------------------------------*/
@@ -74,3 +77,12 @@ li {
 }
 
 /*Styles for the footer navbar  -  End*/
+
+
+.margin-right-10 {
+    margin-right: 10px;
+}
+
+.main-container {
+    padding: 10px;
+}
