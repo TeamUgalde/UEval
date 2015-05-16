@@ -15,11 +15,13 @@ class ProfessorsController < ApplicationController
 
   # GET /professors/new
   def new
+    @school_id = params[:school_id]
     @professor = Professor.new
   end
 
   # GET /professors/1/edit
   def edit
+    @school_id = @professor.school_id
   end
 
   # POST /professors

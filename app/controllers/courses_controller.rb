@@ -16,10 +16,12 @@ class CoursesController < ApplicationController
   # GET /courses/new
   def new
     @course = Course.new
+    @school_id = params[:school_id]
   end
 
   # GET /courses/1/edit
   def edit
+    @school_id = @course.school_id
   end
 
   # POST /courses
