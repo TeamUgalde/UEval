@@ -1,19 +1,21 @@
 - model_class = School
 .page-header
-  %h1=t '.title', :default => model_class.model_name.human.pluralize.titleize
-%table.table.table-striped
-  %thead
-    %tr
-      %th= model_class.human_attribute_name(:id)
-      %th= model_class.human_attribute_name(:name)
-      %th= model_class.human_attribute_name(:university_id)
-      %th= model_class.human_attribute_name(:created_at)
+  %h1.title 
+    %i.fa.fa-book Escuelas
+  %hr
 
-  %tbody
-    - @schools.each do |school|
-      %tr
-        %td= school.id
-        %td= school.name
-        %td= school.university_id
-        %td=l school.created_at
+  #sorts.button-group
+    %button.button.is-checked{"data-sort-by" => "original-order"} Orden Original
+    %button.button{"data-sort-by" => "name"} Nombre
 
+  %hr
+  .row
+    .col-md-10.col-md-offset-1
+      .isotope
+        - @schools.each do |school|
+          %a{:href => school_courses_professors_path(school_id: school.id)}
+            .element-item
+              %h3.name= school.name
+  %hr
+  
+%script{:src => "/assets/schools.js" }

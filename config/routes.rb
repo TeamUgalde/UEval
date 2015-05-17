@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get '/professors/pending', to: 'professors#index_pending'
 
   get '/courses/pending', to: 'courses#index_pending'
+  
+  get '/schools/:school_id/index_courses_professors', to: 'schools#index_courses_professors', as: 'school_courses_professors'
 
   resources :universities, only: :index, shallow: true do
     resources :schools, only: :index do

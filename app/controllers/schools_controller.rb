@@ -8,4 +8,7 @@ class SchoolsController < ApplicationController
     @schools = university.schools
   end
 
+  def index_courses_professors
+    @school_id = params[:school_id]
+  end
 end

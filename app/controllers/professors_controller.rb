@@ -7,6 +7,7 @@ class ProfessorsController < ApplicationController
   def index
     school = School.find(params[:school_id])
     @professors = school.professors
+    render layout: false
   end
 
   # GET /professors/1
