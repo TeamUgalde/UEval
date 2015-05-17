@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
 
   has_many :course_evaluations
   has_many :professor_evaluations
+  has_many :notifications
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

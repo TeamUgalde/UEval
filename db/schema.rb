@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150517075324) do
+ActiveRecord::Schema.define(version: 20150517092841) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,9 +43,10 @@ ActiveRecord::Schema.define(version: 20150517075324) do
     t.string   "name"
     t.float    "overall_difficulty"
     t.integer  "school_id"
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
-    t.boolean  "accepted",           default: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.string   "state",              default: "pending"
+    t.integer  "creator_id"
   end
 
   add_index "courses", ["school_id"], name: "index_courses_on_school_id", using: :btree
@@ -57,6 +58,16 @@ ActiveRecord::Schema.define(version: 20150517075324) do
 
   add_index "courses_professors", ["course_id"], name: "index_courses_professors_on_course_id", using: :btree
   add_index "courses_professors", ["professor_id"], name: "index_courses_professors_on_professor_id", using: :btree
+
+  create_table "notifications", force: :cascade do |t|
+    t.string   "subject"
+    t.integer  "user_id"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "notifications", ["user_id"], name: "index_notifications_on_user_id", using: :btree
 
   create_table "professor_evaluations", force: :cascade do |t|
     t.integer  "arrival_puntuality"
@@ -83,8 +94,10 @@ ActiveRecord::Schema.define(version: 20150517075324) do
     t.string   "last_name"
     t.float    "overall_score"
     t.integer  "school_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.string   "state",         default: "pending"
+    t.integer  "creator_id"
   end
 
   add_index "professors", ["school_id"], name: "index_professors_on_school_id", using: :btree
@@ -123,7 +136,6 @@ ActiveRecord::Schema.define(version: 20150517075324) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "accepted",               default: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

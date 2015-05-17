@@ -1,0 +1,15 @@
+= form_for @notification, url: '/users/edit', html: { class: "form form-horizontal notification" } do |f|
+  .form-group
+    = f.label :subject, class: 'control-label'
+    .controls
+      = f.text_field :subject, class: 'form-control', required: true
+    = error_span(@notification[:subject])
+  .form-group
+    = f.label :description, class: 'control-label'
+    .controls
+      = f.text_area :description, rows: 5, class: 'form-control', required: true
+    = error_span(@notification[:description])
+  = f.submit 'Enviar',class: 'btn btn-primary pull-right'
+  = link_to t('.cancel', :default => t("helpers.links.cancel")), '/users/edit', :class => 'btn btn-default pull-right margin-right-10'
+
+

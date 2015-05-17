@@ -1,5 +1,6 @@
 class ProfessorsController < ApplicationController
   before_action :set_professor, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :edit, :update]
 
   # GET /professors
   # GET /professors.json
@@ -54,15 +55,9 @@ class ProfessorsController < ApplicationController
     end
   end
 
-  # DELETE /professors/1
-  # DELETE /professors/1.json
-  def destroy
-    path = "/schools/#{@professor.school_id}/professors"
-    @professor.destroy
-    respond_to do |format|
-      format.html { redirect_to path, notice: 'Professor was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+  def index_pending
+    @professors = Professor.where(state: 'pending')
+    render layout: false
   end
 
   private

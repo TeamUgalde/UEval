@@ -1,5 +1,31 @@
-// Place all the styles related to the Pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/*Styles for the profile page*/
+.buttons-container {
+  margin-top: 60px;
+}
 
+.accept-button {
+  color: #5CB85C;
+  margin-right: 10px;
+}
 
+.reject-button {
+  color: #DC5050;
+}
+
+.accept-button:hover {
+  color: #416E41;
+}
+
+.reject-button:hover {
+  color: #8D3333;
+}
+
+.item-box {
+  width: 70%;
+  border-bottom: 2px solid #D96459;
+  border-right: 5px solid #D96459;
+  padding-bottom: 5px;
+  margin-bottom: 65px;
+  background-color: #E8E8E8;
+  border-top-left-radius: 10px;
+}

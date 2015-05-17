@@ -1,0 +1,10 @@
+- @notifications.each do |notification|
+  .row.notice-box
+    .col-md-1
+      %i.fa.fa-info-circle.fa-4x
+    .col-md-11
+      %h3
+        %strong
+          = notification.subject
+      %p
+        = notification.description
