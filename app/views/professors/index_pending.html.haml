@@ -1,6 +1,6 @@
 - @professors.each do |professor|
   .row.item-box
-    .col-md-4.col-xs-2
+    .col-md-4.col-sm-3.col-xs-2
       .buttons-container.clear
         %a.accept-button.professor-management-button
           %i.fa.fa-check-circle-o.fa-2x>
@@ -8,7 +8,7 @@
         %a.reject-button.professor-management-button
           %i.fa.fa-ban.fa-2x>
           Rechazar
-    .col-md-8.info.col-xs-10
+    .col-md-8.col-sm-9.col-xs-10
       %p.float-right
       %h2= "Profesor: #{professor.name} #{professor.last_name}"
       %p.justify-text= "Universidad: #{professor.school.university.name} (#{professor.school.university.id})"

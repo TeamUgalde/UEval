@@ -39,7 +39,8 @@
       %main.main-container
         = render partial: "partials/alerts", flash: flash
         = render partial: "partials/navmodal", flash: flash
-        = yield
+        .container
+          = yield
 
       %footer.footer
         %nav.navbar.navbar-default

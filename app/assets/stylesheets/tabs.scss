@@ -44,7 +44,6 @@
 }
 
 .tabs-left > .nav-tabs > li > a {
-  min-width: 74px;
   margin-right: 0;
   margin-bottom: 3px;
 }
@@ -88,7 +87,8 @@
 }
 
 .tab-content {
-    margin-top: 8%;
+  margin: 0 auto;
+  margin-top: 8%;
 }
 
 .tabbable {
