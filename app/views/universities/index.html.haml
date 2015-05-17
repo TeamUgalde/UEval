@@ -1,22 +1,13 @@
 - model_class = University
 .page-header
-  %h1
-    Universidades
-%table.table.table-striped
-  %thead
-    %tr
-      %th= model_class.human_attribute_name(:id)
-      %th= model_class.human_attribute_name(:name)
-      %th= model_class.human_attribute_name(:banner)
-      %th= model_class.human_attribute_name(:webpage)
-      %th= model_class.human_attribute_name(:created_at)
-      %th=t '.actions', :default => t("helpers.actions")
-  %tbody
+  %h1.title
+    %i.fa.fa-graduation-cap Universidades
+    %hr
     - @universities.each do |university|
-      %tr
-        %td= university.id
-        %td= university.name
-        %td= image_tag("banners/#{university.banner}", :alt => "home image", :width => 100, :height => 100, :title => "Click here to return to Home")
-        %td= university.webpage
-        %td=l university.created_at
-
+      .row
+        .col-md-10.col-md-offset-1
+          %h2.university-title= university.name
+          %a{:href => university_schools_path(university_id: university.id)}
+            = image_tag("banners/#{university.banner}", :alt => "home image", :class => "img-responsive")
+          %a.university-link{:href => university.webpage} Sitio Web
+    %hr

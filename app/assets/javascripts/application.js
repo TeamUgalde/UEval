@@ -14,4 +14,12 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require turbolinks
-//= require_tree .
+//= require third_party/isotope
+//= require bootstrap
+//= require comments
+//= require course_evaluations
+//= require courses
+//= require pages
+//= require professor_evaluations
+//= require professors
+//= require universities

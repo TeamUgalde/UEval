@@ -6,6 +6,7 @@ class CoursesController < ApplicationController
   def index
     school = School.find(params[:school_id])
     @courses = school.courses
+    render layout: false
   end
 
   # GET /courses/1
