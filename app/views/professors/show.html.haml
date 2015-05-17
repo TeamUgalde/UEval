@@ -20,6 +20,5 @@
   = @professor.school_id
 
 
-= link_to t('.back', :default => t("helpers.links.back")), professors_path, :class => 'btn btn-default'
+= link_to t('.back', :default => t("helpers.links.back")), school_professors_path(school_id: @professor.school_id), :class => 'btn btn-default'
 = link_to t('.edit', :default => t("helpers.links.edit")), edit_professor_path(@professor), :class => 'btn btn-default'
-= link_to t('.destroy', :default => t("helpers.links.destroy")), professor_path(@professor), :method => "delete", :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-danger'

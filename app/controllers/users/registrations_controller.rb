@@ -19,7 +19,11 @@ end
 
   # GET /resource/edit
 def edit
-  super
+  if request.xhr?
+    render :layout => false
+  else
+    super
+  end
 end
 
   # PUT /resource

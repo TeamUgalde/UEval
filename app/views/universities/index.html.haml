@@ -16,7 +16,7 @@
       %tr
         %td= university.id
         %td= university.name
-        %td= university.banner
+        %td= image_tag("banners/#{university.banner}", :alt => "home image", :width => 100, :height => 100, :title => "Click here to return to Home")
         %td= university.webpage
         %td=l university.created_at
 

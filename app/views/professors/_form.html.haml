@@ -1,4 +1,4 @@
-= form_for @professor, html: { class: "form form-horizontal professor" } do |f|
+= form_for @professor, url: school_professors_path(school_id: @school_id), html: { class: "form form-horizontal professor" } do |f|
   .form-group
     = f.label :name, class: 'control-label'
     .controls
@@ -20,4 +20,4 @@
       = f.text_field :school_id, class: 'form-control', required: true
     = error_span(@professor[:school_id])
   = f.submit nil,class: 'btn btn-primary'
-  = link_to t('.cancel', :default => t("helpers.links.cancel")), professors_path, :class => 'btn btn-default'
+  = link_to t('.cancel', :default => t("helpers.links.cancel")), school_professors_path(school_id: @school_id), :class => 'btn btn-default'

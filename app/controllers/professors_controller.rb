@@ -1,10 +1,12 @@
 class ProfessorsController < ApplicationController
   before_action :set_professor, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :edit, :update]
 
   # GET /professors
   # GET /professors.json
   def index
-    @professors = Professor.all
+    school = School.find(params[:school_id])
+    @professors = school.professors
   end
 
   # GET /professors/1
@@ -14,11 +16,13 @@ class ProfessorsController < ApplicationController
 
   # GET /professors/new
   def new
+    @school_id = params[:school_id]
     @professor = Professor.new
   end
 
   # GET /professors/1/edit
   def edit
+    @school_id = @professor.school_id
   end
 
   # POST /professors
@@ -28,11 +32,11 @@ class ProfessorsController < ApplicationController
 
     respond_to do |format|
       if @professor.save
-        format.html { redirect_to @professor, notice: 'Professor was successfully created.' }
+        format.html { redirect_to school_professors_path, notice: 'Professor was successfully created.' }
         format.json { render :show, status: :created, location: @professor }
       else
         format.html { render :new }
-        format.json { render json: @professor.errors, status: :unprocessable_entity }
+        format.json { render json: school_professors_path.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -51,14 +55,9 @@ class ProfessorsController < ApplicationController
     end
   end
 
-  # DELETE /professors/1
-  # DELETE /professors/1.json
-  def destroy
-    @professor.destroy
-    respond_to do |format|
-      format.html { redirect_to professors_url, notice: 'Professor was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+  def index_pending
+    @professors = Professor.where(state: 'pending')
+    render layout: false
   end
 
   private

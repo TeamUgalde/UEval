@@ -1,0 +1,33 @@
+- @courses.each do |course|
+  .row.item-box
+    .col-md-4
+      .buttons-container.clear
+        %a.accept-button.course-management-button
+          %i.fa.fa-check-circle-o.fa-2x>
+          Aceptar
+        %a.reject-button.course-management-button
+          %i.fa.fa-ban.fa-2x>
+          Rechazar
+    .col-md-6.col-md-offset-1.info
+      %p.float-right
+      %h2= "Curso: #{course.name}"
+      %p.justify-text= "Universidad: #{course.school.university.name} - id = #{course.school.university.id}"
+      %br
+      %p.justify-text= "Escuela: #{course.school.name} (id = #{course.school.id})"
+  %br/
+
+:javascript
+  $('.course-management-button').click(function() {
+    var state = $(this).attr("state");
+    var courseId = $(this).attr("value");
+    var userId = $(this).attr("userId");
+    $.ajax({
+      method: "get",
+      url: "/notifications/new",
+      async: true,
+      data: {newState: state, courseId: courseId, userId: userId},
+      success: function(html){
+        $('.tab-pane.active').html(html);
+      }
+    });
+  });

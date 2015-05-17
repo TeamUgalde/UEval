@@ -1,0 +1,51 @@
+#profile-row.row
+  #profile-tabs.col-md-2.col-sm-3.col-xs-3
+    .tabbable.tabs-left
+      %ul.nav.nav-tabs
+        %li.active.profile-tab{path: '/notifications', div: '#notifications'}
+          %a{"data-toggle" => "tab", :href => "#notifications"} Notificaciones
+        - if current_user.provider != 'facebook'
+          %li.profile-tab{path: '/users/edit', div: '#config'}
+            %a{"data-toggle" => "tab", :href => "#config"} Editar perfil
+        - if current_user.role == 'admin'
+          %li.profile-tab{path: '/professors/pending', div: '#pending-professors'}
+            %a{"data-toggle" => "tab", :href => "#pending-professors"} Profesores Pendientes
+          %li.profile-tab{path: '/courses/pending', div: '#pending-courses'}
+            %a{"data-toggle" => "tab", :href => "#pending-courses"} Cursos Pendientes
+
+  .col-md-9.col-sm-8.col-xs-8
+    .tab-content
+      #config.tab-pane
+      #pending-professors.tab-pane
+      #pending-courses.tab-pane
+      #notifications.tab-pane.active
+        %h4
+          No tiene notificaciones.
+  .col-md-1.col-sm-1.col-xs-1
+
+
+:javascript
+
+  $('.profile-tab').click(function() {
+    path = $(this).attr('path');
+    divId = $(this).attr('div');
+    $.ajax({
+        method: "get",
+        url: path,
+        async: true,
+        success: function(html){
+            if(html != "") $(divId).html(html);
+        }
+    });
+  });
+
+
+  $.ajax({
+        method: "get",
+        url: "/notifications",
+        async: true,
+        success: function(html){
+            if(html != "") $("#notifications").html(html);
+        }
+    });
+

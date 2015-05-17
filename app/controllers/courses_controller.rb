@@ -4,7 +4,8 @@ class CoursesController < ApplicationController
   # GET /courses
   # GET /courses.json
   def index
-    @courses = Course.all
+    school = School.find(params[:school_id])
+    @courses = school.courses
   end
 
   # GET /courses/1
@@ -15,10 +16,12 @@ class CoursesController < ApplicationController
   # GET /courses/new
   def new
     @course = Course.new
+    @school_id = params[:school_id]
   end
 
   # GET /courses/1/edit
   def edit
+    @school_id = @course.school_id
   end
 
   # POST /courses
@@ -28,11 +31,11 @@ class CoursesController < ApplicationController
 
     respond_to do |format|
       if @course.save
-        format.html { redirect_to @course, notice: 'Course was successfully created.' }
+        format.html { redirect_to school_courses_path, notice: 'Course was successfully created.' }
         format.json { render :show, status: :created, location: @course }
       else
         format.html { render :new }
-        format.json { render json: @course.errors, status: :unprocessable_entity }
+        format.json { render json: school_courses_path.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -42,11 +45,11 @@ class CoursesController < ApplicationController
   def update
     respond_to do |format|
       if @course.update(course_params)
-        format.html { redirect_to @course, notice: 'Course was successfully updated.' }
+        format.html { redirect_to school_courses_path, notice: 'Course was successfully updated.' }
         format.json { render :show, status: :ok, location: @course }
       else
         format.html { render :edit }
-        format.json { render json: @course.errors, status: :unprocessable_entity }
+        format.json { render json: school_courses_path.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -54,11 +57,17 @@ class CoursesController < ApplicationController
   # DELETE /courses/1
   # DELETE /courses/1.json
   def destroy
+    path = "/schools/#{@course.school_id}/courses"
     @course.destroy
     respond_to do |format|
-      format.html { redirect_to courses_url, notice: 'Course was successfully destroyed.' }
+      format.html { redirect_to path, notice: 'Course was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def index_pending
+    @courses = Course.where(state: 'pending')
+    render layout: false
   end
 
   private
