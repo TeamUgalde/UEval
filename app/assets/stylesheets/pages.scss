@@ -21,11 +21,15 @@
 }
 
 .item-box {
-  width: 70%;
+  width: 80%;
+  margin: 0 auto;
   border-bottom: 2px solid #D96459;
   border-right: 5px solid #D96459;
-  padding-bottom: 5px;
   margin-bottom: 65px;
   background-color: #E8E8E8;
   border-top-left-radius: 10px;
+}
+
+.edit-profile-panel {
+  margin: 0 auto !important;
 }
