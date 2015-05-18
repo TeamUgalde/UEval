@@ -1,13 +1,15 @@
 - model_class = University
 .page-header
-  %h1.title.text-center
+  %h1.main-title.text-center
     %i.fa.fa-graduation-cap Universidades
-    %hr
+  %hr
+  #universities-section
     - @universities.each do |university|
-      .row
+      .row.university-row
         .col-md-10.col-md-offset-1
           %h2.university-title= university.name
           %a{:href => university_schools_path(university_id: university.id)}
-            = image_tag("banners/#{university.banner}", :alt => "home image", :class => "img-responsive")
-          %a.university-link{:href => university.webpage} Sitio Web
-    %hr
+            = image_tag("banners/#{university.banner}", :alt => "home image", :class => "img-responsive university-banner")
+          %a.university-link{:href => university.webpage}
+            %i.fa.fa-external-link
+              Sitio Web

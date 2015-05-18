@@ -12,11 +12,11 @@ Rails.application.routes.draw do
 
   resources :universities, only: :index, shallow: true do
     resources :schools, only: :index do
-      resources :courses, except: [:destroy, :edit, :update] do
+      resources :courses do
         resources :course_evaluations
         resources :comments, only: [:index, :new, :create, :destroy]
       end
-      resources :professors, except: [:destroy] do
+      resources :professors do
         resources :professor_evaluations
         resources :comments, only: [:index, :new, :create, :destroy]
       end

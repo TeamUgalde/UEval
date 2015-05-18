@@ -22,7 +22,8 @@ var ready = function() {
         if(html != "") $("#courses").html(html);
     }
   });
-}    
+
+}
 
 $(document).on('page:load', ready);
 $(document).ready(ready);

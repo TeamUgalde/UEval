@@ -1,28 +1,31 @@
+= render partial: "partials/alerts", flash: flash
 - model_class = Professor
 .page-header
 
-  #sorts.button-group
-    %button.button.is-checked{"data-sort-by" => "original-order"} Orden Original
-    %button.button{"data-sort-by" => "name"} Nombre
-    %button.button{"data-sort-by" => "score"} Calificacion
-    
-  = link_to 'Agregar profesor', new_school_professor_path, :class => 'button eval-button'
+  = link_to new_school_professor_path, :class => 'eval-button add-button' do
+    %i.fa.fa-plus-circle
+      Agregar profesor
+
+  #sorts-professors.button-group
+    %button.button-professors.button.is-checked{"data-sort-by" => "original-order"} Orden Original
+    %button.button-professors.button{"data-sort-by" => "name"} Nombre
 
   %hr
   .row
     .col-md-10.col-md-offset-1
-      .isotope
+      .isotope-professors
         - @professors.each do |professor|
-          %a{:href => '#'}
-            .element-item
-              %svg
-                %line.top{:x1 => "0", :x2 => "900", :y1 => "0", :y2 => "0"}
-                %line.left{:x1 => "0", :x2 => "0", :y1 => "460", :y2 => "-920"}
-                %line.bottom{:x1 => "300", :x2 => "-600", :y1 => "460", :y2 => "460"}
-                %line.right{:x1 => "300", :x2 => "300", :y1 => "0", :y2 => "1380"}
-              %h3.name= professor.name + ' ' + professor.last_name
-              %p.label Calificacion promedio
-              %p.score= professor.overall_score
+          - if professor.state.eql? "accepted"
+            = link_to professor_path(id: professor.id) do
+              .element-item
+                %svg
+                  %line.top{:x1 => "0", :x2 => "900", :y1 => "0", :y2 => "0"}
+                  %line.left{:x1 => "0", :x2 => "0", :y1 => "460", :y2 => "-920"}
+                  %line.bottom{:x1 => "300", :x2 => "-600", :y1 => "460", :y2 => "460"}
+                  %line.right{:x1 => "300", :x2 => "300", :y1 => "0", :y2 => "1380"}
+                %h3.name= professor.name + ' ' + professor.last_name
+                %p.label Calificacion promedio
+                %p.score= professor.overall_score
   %hr
-  
+
 %script{:src => "/assets/professors.js" }

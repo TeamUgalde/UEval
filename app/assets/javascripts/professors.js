@@ -2,21 +2,20 @@
 // All this logic will automatically be available in application.js.
 
 var ready = function() {
+    var $containerProfessors = $('.isotope-professors').isotope({
+        layoutMode: 'fitRows',
+        itemSelector: '.element-item',
+        getSortData: {
+            name: '.name'
+        }
+    });
 
-  var $container = $('.isotope').isotope({
-    layoutMode: 'fitRows',
-    itemSelector: '.element-item',
-    getSortData: {
-      name: '.name',
-      score: '.score'
-    }
-  });
-  
-  // bind sort button click
-  $('#sorts').on( 'click', 'button', function() {
-    var sortByValue = $(this).attr('data-sort-by');
-    $container.isotope({ sortBy: sortByValue });
-  });
+    // bind sort button click
+    $('body').on( 'click', '.button-professors', function() {
+        var sortByValue = $(this).attr('data-sort-by');
+        $containerProfessors.isotope({ sortBy: sortByValue });
+    });
+
 }
 
 $(document).on('page:load', ready);

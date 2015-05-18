@@ -1,33 +1,17 @@
 - @professors.each do |professor|
   .row.item-box
-    .col-md-4.col-sm-3.col-xs-2
-      .buttons-container.clear
-        %a.accept-button.professor-management-button
-          %i.fa.fa-check-circle-o.fa-2x>
-          Aceptar
-        %a.reject-button.professor-management-button
-          %i.fa.fa-ban.fa-2x>
-          Rechazar
-    .col-md-8.col-sm-9.col-xs-10
+    .col-md-8
       %p.float-right
-      %h2= "Profesor: #{professor.name} #{professor.last_name}"
-      %p.justify-text= "Universidad: #{professor.school.university.name} (#{professor.school.university.id})"
+      %h3= "Profesor: #{professor.name} #{professor.last_name}"
+      %p= "Universidad: #{professor.school.university.name} (id = #{professor.school.university.id})"
       %br
-      %p.justify-text= "Escuela: #{professor.school.name} (id = #{professor.school.id})"
-  %br/
+      %p= "Escuela: #{professor.school.name} (id = #{professor.school.id})"
+    .col-md-4
+      .buttons-container.pull-right.clear
+        = link_to '', :class => 'margin-right-10 accept-button', userId: "#{professor.creator_id}", resourceId: "#{professor.id}" , resource: "professors",remote: true do
+          %i.fa.fa-check-circle-o>
+            Aceptar
+        = link_to '', :class => 'margin-left-10 reject-button', userId: "#{professor.creator_id}", resourceId: "#{professor.id}" , resource: "professors", remote: true do
+          %i.fa.fa-ban>
+            Rechazar
 
-:javascript
-  $('.professor-management-button').click(function() {
-    var state = $(this).attr("state");
-    var professorId = $(this).attr("value");
-    var userId = $(this).attr("userId");
-    $.ajax({
-      method: "get",
-      url: "/notifications/new",
-      async: true,
-      data: {newState: state, professorId: professorId, userId: userId},
-      success: function(html){
-        $('.tab-pane.active').html(html);
-      }
-    });
-  });
