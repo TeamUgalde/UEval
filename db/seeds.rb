@@ -89,7 +89,6 @@ courses = Course.create([
                          school_id: 1, state: 'accepted'},
                          ])
                          
-=end
 
 professors = Professor.create([
                          {name: 'Eddy', last_name: 'Ramirez', overall_score: 6,
@@ -107,3 +106,6 @@ professors = Professor.create([
                          {name: 'Erick', last_name: 'Hernandez', overall_score: 9,
                          school_id: 1, state: 'accepted'},
                          ])
+                         
+=end                         
+

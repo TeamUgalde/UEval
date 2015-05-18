@@ -1,24 +1,32 @@
 - model_class = Professor
 .page-header
-  %h1=t '.title', :default => model_class.model_name.human.titleize
+  
+  %h1.text-center.title= @professor.name + ' ' + @professor.last_name
 
-%p
-  %strong= model_class.human_attribute_name(:name) + ':'
-  %br
-  = @professor.name
-%p
-  %strong= model_class.human_attribute_name(:last_name) + ':'
-  %br
-  = @professor.last_name
-%p
-  %strong= model_class.human_attribute_name(:overall_score) + ':'
-  %br
-  = @professor.overall_score
-%p
-  %strong= model_class.human_attribute_name(:school_id) + ':'
-  %br
-  = @professor.school_id
+.row
+  .col-md-10.col-md-offset-1
+    %p.diff-label Calificacion promedio del profesor:  
+    %p.diff-num= @professor.overall_score
+    %button.eval-button
+      Evaluar profesor
+      %i.fa.fa-pencil-square-o
+    
+    .prof-list
+      %h3 Lista de cursos impartidos:
+      %br
+      
+      .row
+        .col-md-10.col-md-offset-1
+          #list8
+            %ul
+              - @professor_courses.each do |course|
+                %li.text-center
+                  %a{:href => "#"}= course.name
+      %hr
 
-
-= link_to t('.back', :default => t("helpers.links.back")), school_professors_path(school_id: @professor.school_id), :class => 'btn btn-default'
-= link_to t('.edit', :default => t("helpers.links.edit")), edit_professor_path(@professor), :class => 'btn btn-default'
+    %section#comment-section
+      %h3.text-center Comentarios
+    %button.show-comments-button
+      Mostrar Comentarios
+      %i.fa.fa-comments
+    %hr
