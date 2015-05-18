@@ -1,33 +1,16 @@
 - @courses.each do |course|
-  .row.item-box
-    .col-md-4
-      .buttons-container.clear
-        %a.accept-button.course-management-button
-          %i.fa.fa-check-circle-o.fa-2x>
-          Aceptar
-        %a.reject-button.course-management-button
-          %i.fa.fa-ban.fa-2x>
-          Rechazar
-    .col-md-6
+  .row.item-box{resource: 'courses'}
+    .col-md-8
       %p.float-right
-      %h2= "Curso: #{course.name}"
-      %p.justify-text= "Universidad: #{course.school.university.name} - id = #{course.school.university.id}"
+      %h3= "Curso: #{course.name}"
+      %p= "Universidad: #{course.school.university.name} - id = #{course.school.university.id}"
       %br
-      %p.justify-text= "Escuela: #{course.school.name} (id = #{course.school.id})"
-  %br/
-
-:javascript
-  $('.course-management-button').click(function() {
-    var state = $(this).attr("state");
-    var courseId = $(this).attr("value");
-    var userId = $(this).attr("userId");
-    $.ajax({
-      method: "get",
-      url: "/notifications/new",
-      async: true,
-      data: {newState: state, courseId: courseId, userId: userId},
-      success: function(html){
-        $('.tab-pane.active').html(html);
-      }
-    });
-  });
+      %p= "Escuela: #{course.school.name} (id = #{course.school.id})"
+    .col-md-4
+      .buttons-container.pull-right.clear
+        = link_to '', :class => 'accept-button margin-right-10', userId: "#{course.creator_id}", resourceId: "#{course.id}" , resource: "courses",remote: true do
+          %i.fa.fa-check-circle-o>
+            Aceptar
+        = link_to '', :class => 'reject-button margin-left-10', userId: "#{course.creator_id}", resourceId: "#{course.id}" , resource: "courses", remote: true do
+          %i.fa.fa-ban>
+            Rechazar

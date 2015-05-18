@@ -1,50 +1,30 @@
-#profile-row.row
-  #profile-tabs.col-md-2.col-sm-3.col-xs-3
-    .tabbable.tabs-left
-      %ul.nav.nav-tabs
-        %li.active.profile-tab{path: '/notifications', div: '#notifications'}
-          %a{"data-toggle" => "tab", :href => "#notifications"} Notificaciones
+.row
+  .col-md-10.col-md-offset-1
+    %div{:role => "tabpanel", class: 'horizontal-tabs'}
+      / Nav tabs
+      %ul.nav.nav-tabs{:role => "tablist"}
+        %li.active.profile-tab{:role => 'presentation', path: '/notifications', div: '#notifications'}
+          %a{"aria-controls" => "notification", "data-toggle" => "tab", :href => "#notifications", :role => "tab"} Notificaciones
         - if current_user.provider != 'facebook'
-          %li.profile-tab{path: '/users/edit', div: '#config'}
-            %a{"data-toggle" => "tab", :href => "#config"} Editar perfil
+          %li.profile-tab{:role => 'presentation', path: '/users/edit', div: '#edit-profile'}
+            %a{"aria-controls" => "edit-profile", "data-toggle" => "tab", :href => "#edit-profile", :role => "tab"} Editar perfil
         - if current_user.role == 'admin'
-          %li.profile-tab{path: '/professors/pending', div: '#pending-professors'}
-            %a{"data-toggle" => "tab", :href => "#pending-professors"} Profesores Pendientes
-          %li.profile-tab{path: '/courses/pending', div: '#pending-courses'}
-            %a{"data-toggle" => "tab", :href => "#pending-courses"} Cursos Pendientes
+          %li.profile-tab{:role => 'presentation', path: '/professors/pending', div: '#pending-professors'}
+            %a{"aria-controls" => "pending-professors", "data-toggle" => "tab", :href => "#pending-professors", :role => "tab"} Profesores pendientes
+          %li.profile-tab{:role => 'presentation', path: '/courses/pending', div: '#pending-courses'}
+            %a{"aria-controls" => "pending-courses", "data-toggle" => "tab", :href => "#pending-courses", :role => "tab"} Cursos pendientes
 
-  .col-md-10.col-sm-9.col-xs-9
-    .tab-content
-      #config.tab-pane
-      #pending-professors.tab-pane
-      #pending-courses.tab-pane
-      #notifications.tab-pane.active
-        %h4
-          No tiene notificaciones.
+      / Tab panes
+      .tab-content
+        #notifications.tab-pane.active{:role => "tabpanel"}
+          %h4
+            No tiene notificaciones.
+        #edit-profile.tab-pane{:role => "tabpanel"}
+        #pending-professors.tab-pane{:role => "tabpanel"}
+          %h4
+            No hay profesores pendientes de aceptación.
+        #pending-courses.tab-pane{:role => "tabpanel"}
+          %h4
+            No hay cursos pendientes de aceptación.
 
-
-:javascript
-
-  $('.profile-tab').click(function() {
-    path = $(this).attr('path');
-    divId = $(this).attr('div');
-    $.ajax({
-        method: "get",
-        url: path,
-        async: true,
-        success: function(html){
-            if(html != "") $(divId).html(html);
-        }
-    });
-  });
-
-
-  $.ajax({
-        method: "get",
-        url: "/notifications",
-        async: true,
-        success: function(html){
-            if(html != "") $("#notifications").html(html);
-        }
-    });
-
+%script{:src => "/assets/profile.js" }

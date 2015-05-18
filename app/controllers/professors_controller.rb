@@ -1,6 +1,6 @@
 class ProfessorsController < ApplicationController
   before_action :set_professor, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new, :edit, :update]
+  before_action :authenticate_user!, only: [:new, :edit, :update, :index_pending]
 
   # GET /professors
   # GET /professors.json
@@ -26,6 +26,12 @@ class ProfessorsController < ApplicationController
     @school_id = @professor.school_id
   end
 
+  def destroy
+    @professor.destroy
+    flash[:notice] = 'Se ha rechazado y eliminado el profesor!'
+    redirect_to profile_path, status: 303
+  end
+
   # POST /professors
   # POST /professors.json
   def create
@@ -45,15 +51,10 @@ class ProfessorsController < ApplicationController
   # PATCH/PUT /professors/1
   # PATCH/PUT /professors/1.json
   def update
-    respond_to do |format|
-      if @professor.update(professor_params)
-        format.html { redirect_to @professor, notice: 'Professor was successfully updated.' }
-        format.json { render :show, status: :ok, location: @professor }
-      else
-        format.html { render :edit }
-        format.json { render json: @professor.errors, status: :unprocessable_entity }
-      end
-    end
+    @professor.state = 'accepted'
+    @professor.save
+    flash[:notice] = 'Se ha aceptado el profesor!'
+    redirect_to profile_path, status: 303
   end
 
   def index_pending

@@ -1,5 +1,6 @@
 class CoursesController < ApplicationController
   before_action :set_course, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :edit, :update, :index_pending]
 
   # GET /courses
   # GET /courses.json
@@ -25,6 +26,12 @@ class CoursesController < ApplicationController
     @school_id = @course.school_id
   end
 
+  def destroy
+    @course.destroy
+    flash[:notice] = 'Se ha rechazado y eliminado el curso!'
+    redirect_to profile_path, status: 303
+  end
+
   # POST /courses
   # POST /courses.json
   def create
@@ -41,29 +48,13 @@ class CoursesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /courses/1
-  # PATCH/PUT /courses/1.json
+  # PATCH/PUT /professors/1
+  # PATCH/PUT /professors/1.json
   def update
-    respond_to do |format|
-      if @course.update(course_params)
-        format.html { redirect_to school_courses_path, notice: 'Course was successfully updated.' }
-        format.json { render :show, status: :ok, location: @course }
-      else
-        format.html { render :edit }
-        format.json { render json: school_courses_path.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /courses/1
-  # DELETE /courses/1.json
-  def destroy
-    path = "/schools/#{@course.school_id}/courses"
-    @course.destroy
-    respond_to do |format|
-      format.html { redirect_to path, notice: 'Course was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    @course.state = 'accepted'
+    @course.save
+    flash[:notice] = 'Se ha aceptado el profesor!'
+    redirect_to profile_path, status: 303
   end
 
   def index_pending
