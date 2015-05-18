@@ -117,3 +117,111 @@ button:active {
   font-size: 1.2em;
   color: #eee;
 }
+
+#list8 {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#list8 ul { 
+  list-style: none; 
+}
+
+#list8 ul li {
+  font-family: Georgia,serif,Times;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 2px;
+}
+
+#list8 ul li a {
+  display: block;
+  width: 500px;
+  height: 40px;
+  background-color: #588C7E;
+  border-left: 6px solid #33564c;
+  border-right: 6px solid #33564c;
+  padding-left: 10px;
+  text-decoration: none;
+  color: #eee;
+  padding: 6px;
+}
+
+#list8 ul li a:hover {
+  -moz-transform:rotate(3deg);
+    -moz-box-shadow:10px 10px 20px #000000;
+  -webkit-transform:rotate(3deg); 
+    -webkit-box-shadow:10px 10px 20px #000000;
+  transform: rotate(3deg); 
+  box-shadow: 10px 10px 20px #000000;
+}
+
+.diff-label {
+  font-size: 1.7em;
+  float: left;
+  margin-right: 20px;
+}
+
+.diff-num {
+  font-size: 4em;
+  font-weight: bold;
+}
+
+.eval-button {
+  float: right;
+}
+
+.prof-list {
+  clear: both;
+}
+
+svg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+svg line {
+	stroke-width: 6;
+	stroke: white;
+	fill: none;
+	-webkit-transition: -webkit-transform .8s ease-out;
+	transition: transform .8s ease-out;
+}
+
+.element-item svg line.top,
+.element-item svg line.bottom {
+	stroke-dasharray: 330 240; 
+}
+
+.element-item svg line.left,
+.element-item svg line.right {
+	stroke-dasharray: 490 400;
+}
+
+.element-item:hover svg line {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+.element-item:hover svg line.top {
+	-webkit-transform: translateX(-600px);
+	transform: translateX(-600px);
+}
+
+.element-item:hover svg line.bottom {
+	-webkit-transform: translateX(600px);
+	transform: translateX(600px);
+}
+
+.element-item:hover svg line.left {
+	-webkit-transform: translateY(920px);
+	transform: translateY(920px);
+}
+
+.element-item:hover svg line.right {
+	-webkit-transform: translateY(-920px);
+	transform: translateY(-920px);
+}

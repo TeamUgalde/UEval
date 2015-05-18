@@ -5,6 +5,8 @@
     %button.button.is-checked{"data-sort-by" => "original-order"} Orden Original
     %button.button{"data-sort-by" => "name"} Nombre
     %button.button{"data-sort-by" => "score"} Calificacion
+    
+  = link_to 'Agregar profesor', new_school_professor_path, :class => 'button eval-button'
 
   %hr
   .row
@@ -13,6 +15,11 @@
         - @professors.each do |professor|
           %a{:href => '#'}
             .element-item
+              %svg
+                %line.top{:x1 => "0", :x2 => "900", :y1 => "0", :y2 => "0"}
+                %line.left{:x1 => "0", :x2 => "0", :y1 => "460", :y2 => "-920"}
+                %line.bottom{:x1 => "300", :x2 => "-600", :y1 => "460", :y2 => "460"}
+                %line.right{:x1 => "300", :x2 => "300", :y1 => "0", :y2 => "1380"}
               %h3.name= professor.name + ' ' + professor.last_name
               %p.label Calificacion promedio
               %p.score= professor.overall_score
