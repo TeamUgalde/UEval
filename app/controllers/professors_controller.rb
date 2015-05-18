@@ -6,7 +6,7 @@ class ProfessorsController < ApplicationController
   # GET /professors.json
   def index
     school = School.find(params[:school_id])
-    @professors = school.professors
+    @professors = school.professors.order("overall_score DESC")
     render layout: false
   end
 
@@ -19,8 +19,10 @@ class ProfessorsController < ApplicationController
 
   # GET /professors/new
   def new
+
     @school_id = params[:school_id]
     @professor = Professor.new
+    @courses = School.find(@school_id).courses
   end
 
   # GET /professors/1/edit
@@ -37,11 +39,17 @@ class ProfessorsController < ApplicationController
   # POST /professors
   # POST /professors.json
   def create
-    @professor = Professor.new(professor_params)
+    @professor = Professor.new
+    @professor.name = professor_params[:name]
+    @professor.last_name = professor_params[:last_name]
+    @professor.overall_score = 0;
+    @professor.school_id = params[:school_id]
+    @professor.creator_id = current_user.id
 
     respond_to do |format|
       if @professor.save
-        format.html { redirect_to school_professors_path, notice: 'Professor was successfully created.' }
+        add_selected_courses
+        format.html { redirect_to school_courses_professors_path, notice: 'El profesor fue creado, pronto le enviaremos una notificación sobre su validación!' }
         format.json { render :show, status: :created, location: @professor }
       else
         format.html { render :new }
@@ -72,6 +80,12 @@ class ProfessorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def professor_params
-      params.require(:professor).permit(:name, :last_name, :overall_score)
+      params.require(:professor).permit(:name, :last_name, :professor_courses => [])
+    end
+
+    def add_selected_courses
+      professor_courses = professor_params[:professor_params => []]
+      courses_list = professor_courses.nil? ? [] : professor_courses.keys.collect{|id| Course.find(id)}
+      courses_list.each {|c| self.courses << c}
     end
 end

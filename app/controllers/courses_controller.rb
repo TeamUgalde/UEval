@@ -6,7 +6,7 @@ class CoursesController < ApplicationController
   # GET /courses.json
   def index
     school = School.find(params[:school_id])
-    @courses = school.courses
+    @courses = school.courses.order("overall_difficulty DESC")
     render layout: false
   end
 
@@ -38,10 +38,12 @@ class CoursesController < ApplicationController
   # POST /courses.json
   def create
     @course = Course.new(course_params)
-
+    @course.overall_difficulty = 0
+    @course.school_id = params[:school_id]
+    @course.creator_id = current_user.id
     respond_to do |format|
       if @course.save
-        format.html { redirect_to school_courses_path, notice: 'Course was successfully created.' }
+        format.html { redirect_to school_courses_professors_path, notice: 'El curso fue creado con éxito, se enviará una notificación cuando sea validado!' }
         format.json { render :show, status: :created, location: @course }
       else
         format.html { render :new }
@@ -72,6 +74,6 @@ class CoursesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def course_params
-      params.require(:course).permit(:name, :overall_difficulty)
+      params.require(:course).permit(:name)
     end
 end

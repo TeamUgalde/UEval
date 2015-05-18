@@ -3,4 +3,6 @@ class Professor < ActiveRecord::Base
   has_and_belongs_to_many :courses
   has_many :professor_evaluations
   has_many :comments, as: :commentable
+
+  attr_accessor :professor_courses
 end
