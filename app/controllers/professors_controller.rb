@@ -14,7 +14,7 @@ class ProfessorsController < ApplicationController
   # GET /professors/1.json
   def show
     @professor = Professor.find(params[:id])
-    @professor_courses = @professor.courses
+    @professor_courses = @professor.courses.where(state: 'accepted')
   end
 
   # GET /professors/new
@@ -22,7 +22,7 @@ class ProfessorsController < ApplicationController
 
     @school_id = params[:school_id]
     @professor = Professor.new
-    @courses = School.find(@school_id).courses
+    @courses = School.find(@school_id).courses.where(state: 'accepted')
   end
 
   # GET /professors/1/edit
@@ -49,7 +49,7 @@ class ProfessorsController < ApplicationController
     respond_to do |format|
       if @professor.save
         add_selected_courses
-        format.html { redirect_to school_courses_professors_path, notice: 'El profesor fue creado, pronto le enviaremos una notificación sobre su validación!' }
+        format.html { redirect_to school_courses_professors_path, notice: 'El profesor fue creado, enviaremos una notificación para que sepas si fue aceptado!' }
         format.json { render :show, status: :created, location: @professor }
       else
         format.html { render :new }
@@ -68,7 +68,7 @@ class ProfessorsController < ApplicationController
   end
 
   def index_pending
-    @professors = Professor.where(state: 'pending')
+    @professors = Professor.where(state: 'pending').order("created_at DESC")
     render layout: false
   end
 
@@ -84,8 +84,12 @@ class ProfessorsController < ApplicationController
     end
 
     def add_selected_courses
-      professor_courses = professor_params[:professor_params => []]
-      courses_list = professor_courses.nil? ? [] : professor_courses.keys.collect{|id| Course.find(id)}
-      courses_list.each {|c| self.courses << c}
+      professor_courses = professor_params[:professor_courses]
+      professor_courses.each do |c|
+        id = c.to_i
+        if id != 0
+          @professor.courses << Course.find(id)
+        end
+      end
     end
 end

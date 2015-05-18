@@ -14,7 +14,7 @@ class CoursesController < ApplicationController
   # GET /courses/1.json
   def show
     @course = Course.find(params[:id])
-    @course_professors = @course.professors
+    @course_professors = @course.professors.where(state: 'accepted')
   end
 
   # GET /courses/new
