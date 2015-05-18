@@ -1,21 +1,21 @@
 - model_class = Course
 .page-header
-  %h1=t '.title', :default => model_class.model_name.human.pluralize.titleize
-%table.table.table-striped
-  %thead
-    %tr
-      %th= model_class.human_attribute_name(:id)
-      %th= model_class.human_attribute_name(:name)
-      %th= model_class.human_attribute_name(:overall_difficulty)
-      %th= model_class.human_attribute_name(:school_id)
-      %th= model_class.human_attribute_name(:created_at)
-  %tbody
-    - @courses.each do |course|
-      %tr
-        %td= link_to course.id, course_path(course)
-        %td= course.name
-        %td= course.overall_difficulty
-        %td= course.school_id
-        %td=l course.created_at
 
-= link_to t('.new', :default => t("helpers.links.new")), new_school_course_path, :class => 'btn btn-primary'
+  #sorts.button-group
+    %button.button.is-checked{"data-sort-by" => "original-order"} Orden Original
+    %button.button{"data-sort-by" => "name"} Nombre
+    %button.button{"data-sort-by" => "difficulty"} Dificultad
+
+  %hr
+  .row
+    .col-md-10.col-md-offset-1
+      .isotope
+        - @courses.each do |course|
+          %a{:href => '#'}
+            .element-item
+              %h3.name= course.name
+              %p.label Dificultad promedio
+              %p.difficulty= course.overall_difficulty
+  %hr
+  
+%script{:src => "/assets/courses.js" }

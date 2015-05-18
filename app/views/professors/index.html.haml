@@ -1,26 +1,21 @@
 - model_class = Professor
 .page-header
-  %h1=t '.title', :default => model_class.model_name.human.pluralize.titleize
-%table.table.table-striped
-  %thead
-    %tr
-      %th= model_class.human_attribute_name(:id)
-      %th= model_class.human_attribute_name(:name)
-      %th= model_class.human_attribute_name(:last_name)
-      %th= model_class.human_attribute_name(:overall_score)
-      %th= model_class.human_attribute_name(:school_id)
-      %th= model_class.human_attribute_name(:created_at)
-      %th=t '.actions', :default => t("helpers.actions")
-  %tbody
-    - @professors.each do |professor|
-      %tr
-        %td= link_to professor.id, professor_path(professor)
-        %td= professor.name
-        %td= professor.last_name
-        %td= professor.overall_score
-        %td= professor.school_id
-        %td=l professor.created_at
-        %td
-          = link_to t('.edit', :default => t("helpers.links.edit")), edit_professor_path(professor), :class => 'btn btn-default btn-xs'
 
-= link_to t('.new', :default => t("helpers.links.new")), new_school_professor_path, :class => 'btn btn-primary'
+  #sorts.button-group
+    %button.button.is-checked{"data-sort-by" => "original-order"} Orden Original
+    %button.button{"data-sort-by" => "name"} Nombre
+    %button.button{"data-sort-by" => "score"} Calificacion
+
+  %hr
+  .row
+    .col-md-10.col-md-offset-1
+      .isotope
+        - @professors.each do |professor|
+          %a{:href => '#'}
+            .element-item
+              %h3.name= professor.name + ' ' + professor.last_name
+              %p.label Calificacion promedio
+              %p.score= professor.overall_score
+  %hr
+  
+%script{:src => "/assets/professors.js" }

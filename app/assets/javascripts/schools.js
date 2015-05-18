@@ -7,7 +7,7 @@ var ready = function() {
     layoutMode: 'fitRows',
     itemSelector: '.element-item',
     getSortData: {
-      name: '.name',
+      name: '.name'
     }
   });
   
