@@ -13,6 +13,8 @@ class ProfessorsController < ApplicationController
   # GET /professors/1
   # GET /professors/1.json
   def show
+    @professor = Professor.find(params[:id])
+    @professor_courses = @professor.courses
   end
 
   # GET /professors/new

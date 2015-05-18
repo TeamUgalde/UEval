@@ -67,4 +67,45 @@ schools = School.create([
                                       university_id: 2}
                                  ])
 
-=end
+
+courses = Course.create([
+                         {name: 'Estructura de Datos', overall_difficulty: 7,
+                         school_id: 1, state: 'accepted'},
+                         {name: 'Programacion Orientada a Objetos', overall_difficulty: 6,
+                         school_id: 1, state: 'accepted'},
+                         {name: 'Analisis de Algoritmos', overall_difficulty: 8,
+                         school_id: 1, state: 'accepted'},
+                         {name: 'Lenguajes de Programacion', overall_difficulty: 8,
+                         school_id: 1, state: 'accepted'},
+                         {name: 'Redes', overall_difficulty: 9,
+                         school_id: 1, state: 'accepted'},
+                         {name: 'Administracion de Proyectos', overall_difficulty: 2,
+                         school_id: 1, state: 'accepted'},
+                         {name: 'Inteligencia Artificial', overall_difficulty: 9,
+                         school_id: 1, state: 'accepted'},
+                         {name: 'Introduccion a la Programacion', overall_difficulty: 4,
+                         school_id: 1, state: 'accepted'},
+                         {name: 'Taller de Programacion', overall_difficulty: 5,
+                         school_id: 1, state: 'accepted'},
+                         ])
+                         
+
+professors = Professor.create([
+                         {name: 'Eddy', last_name: 'Ramirez', overall_score: 6,
+                         school_id: 1, state: 'accepted'},
+                         {name: 'Carlos', last_name: 'Arias', overall_score: 10,
+                         school_id: 1, state: 'accepted'},
+                         {name: 'Jaime', last_name: 'Gutierrez', overall_score: 7,
+                         school_id: 1, state: 'accepted'},
+                         {name: 'Diego', last_name: 'Munguia', overall_score: 8,
+                         school_id: 1, state: 'accepted'},
+                         {name: 'Mauricio', last_name: 'Aviles', overall_score: 3,
+                         school_id: 1, state: 'accepted'},
+                         {name: 'Kevin', last_name: 'Moraga', overall_score: 5,
+                         school_id: 1, state: 'accepted'},
+                         {name: 'Erick', last_name: 'Hernandez', overall_score: 9,
+                         school_id: 1, state: 'accepted'},
+                         ])
+                         
+=end                         
+

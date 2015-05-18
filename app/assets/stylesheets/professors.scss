@@ -1,0 +1,115 @@
+* {
+  -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+h2, #sorts {
+  margin-left: 20px;
+}
+
+button {
+  border: 0;
+  background: #873c36;
+  border-radius: 4px;
+  box-shadow: 0 5px 0 #60231f;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 12px 20px;
+  transition: all .1s linear;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+button:active {
+  box-shadow: 0 2px 0 #60231f;
+  transform: translateY(3px);
+}
+
+/* ---- button-group ---- */
+
+.button-group:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.button-group .button {
+  float: left;
+  border-radius: 0;
+  margin-left: 0;
+  margin-right: 1px;
+}
+
+.button-group .button:first-child { 
+  border-radius: 0.5em 0 0 0.5em; 
+}
+.button-group .button:last-child { 
+  border-radius: 0 0.5em 0.5em 0; 
+}
+
+/* clear fix */
+.isotope {
+  margin: 0 auto;
+}
+
+.isotope:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.element-item {
+  border: 0;
+  border-radius: 5px;
+  position: relative;
+  float: left;
+  width: 200px;
+  height: 150px;
+  margin: 5px;
+  padding: 10px;
+  background: #588C7E;
+}
+
+.element-item:hover {
+  background: #33564c;
+}
+
+.element-item > * {
+  margin: 0;
+  padding: 0;
+}
+
+.element-item .name {
+  margin-top: 10px;
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  top: 0px;
+  font-size: 2em;
+  font-weight: bold;
+  color: #eee;
+}
+
+.element-item .score {
+  position: absolute;
+  right: 8px;
+  bottom: 5px;
+  font-size: 1.2em;
+  color: #eee;
+}
+
+.element-item .label {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  font-size: 1.2em;
+  color: #eee;
+}
