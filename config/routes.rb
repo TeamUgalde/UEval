@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :universities, only: :index, shallow: true do
     resources :schools, only: :index do
       resources :courses do
-        resources :course_evaluations
+        resources :course_evaluations, only: [:new, :create]
         resources :comments, only: [:index, :new, :create, :destroy]
       end
       resources :professors do

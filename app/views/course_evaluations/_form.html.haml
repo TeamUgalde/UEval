@@ -1,18 +1,9 @@
-= form_for @course_evaluation, html: { class: "form form-horizontal course_evaluation" } do |f|
+= form_for @course_evaluation, url: course_course_evaluations_path, html: { class: "form form-horizontal course_evaluation" } do |f|
   .form-group
-    = f.label :difficulty, class: 'control-label'
+    = f.label :professor_courses, 'Seleccione la dificultad (5 es lo más difícil)', class: 'control-label'
     .controls
-      = f.text_field :difficulty, class: 'form-control', required: true
-    = error_span(@course_evaluation[:difficulty])
-  .form-group
-    = f.label :user_id, class: 'control-label'
-    .controls
-      = f.text_field :user_id, class: 'form-control', required: true
-    = error_span(@course_evaluation[:user_id])
-  .form-group
-    = f.label :course_id, class: 'control-label'
-    .controls
-      = f.text_field :course_id, class: 'form-control', required: true
-    = error_span(@course_evaluation[:course_id])
-  = f.submit nil,class: 'btn btn-primary'
-  = link_to t('.cancel', :default => t("helpers.links.cancel")), course_evaluations_path, :class => 'btn btn-default'
+      = f.select :difficulty, options_for_select(['1','2','3','4','5']),{}, {:style => "width:450px;" }
+    = error_span(@course_evaluation[:overall_score])
+  = f.submit 'Añadir evaluación',class: 'btn btn-primary'
+  = link_to t('.cancel', :default => t('Cancelar')), course_path(id: @course_id), :class => 'btn btn-default'
+

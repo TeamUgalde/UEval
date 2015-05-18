@@ -1,3 +1,68 @@
-// Place all the styles related to the Comments controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.comment-list {
+  padding: 0;
+  list-style: none;
+  max-height: 1000px;
+  overflow: auto;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.comment-list li {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.comment-text p {
+  margin: 0;
+  clear: both;
+  float: right;
+  width: 100%;
+}
+
+.commenter-name {
+  float: left;
+  width: 100%;
+  font-weight: bold;
+  border-top: 1px dashed #337AB7;
+  padding-top: 5px;
+}
+
+.comment-form {
+  margin-bottom: 20px;
+  float: right;
+}
+
+.comment-date {
+  margin-bottom: 25px;
+}
+
+.delete-comment-button {
+  float: right;
+}
+
+.send-comment-button {
+  float: right;
+}
+
+#comment-section {
+  display: none;
+  width: 100%;
+  margin-bottom: 60px;
+  padding: 10px;
+  background-color: #E8E8E8;
+  border-radius: 32px;
+}
+
+.comments-column {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.show-comments-button {
+  margin: 0 auto !important;
+  clear: both;
+}
+
+#comments {
+  width: 100%;
+}

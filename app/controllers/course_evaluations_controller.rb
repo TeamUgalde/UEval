@@ -1,65 +1,34 @@
 class CourseEvaluationsController < ApplicationController
   before_action :set_course_evaluation, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
-  # GET /course_evaluations
-  # GET /course_evaluations.json
-  def index
-    @course_evaluations = CourseEvaluation.all
-  end
-
-  # GET /course_evaluations/1
-  # GET /course_evaluations/1.json
-  def show
-  end
 
   # GET /course_evaluations/new
   def new
     @course_evaluation = CourseEvaluation.new
-  end
-
-  # GET /course_evaluations/1/edit
-  def edit
+    @course_id = params[:course_id]
   end
 
   # POST /course_evaluations
   # POST /course_evaluations.json
   def create
-    @course_evaluation = CourseEvaluation.new(course_evaluation_params)
-
-    respond_to do |format|
+    evaluation = CourseEvaluation.where(['user_id = ? and course_id = ?',current_user.id, params[:course_id]])
+    if evaluation.blank?
+      @course_evaluation = CourseEvaluation.new
+      @course_evaluation.difficulty = course_evaluation_params[:difficulty].to_i
+      @course_evaluation.user_id = current_user.id
+      @course_evaluation.course_id = params[:course_id]
       if @course_evaluation.save
-        format.html { redirect_to @course_evaluation, notice: 'Course evaluation was successfully created.' }
-        format.json { render :show, status: :created, location: @course_evaluation }
+        modify_evaluated_course
+        redirect_to course_path(id: params[:course_id]), notice:  'Se ha evaluado el curso con éxito!'
       else
-        format.html { render :new }
-        format.json { render json: @course_evaluation.errors, status: :unprocessable_entity }
+        render :new, notice:  'Hubo un error al evaluar el curso'
       end
+    else
+      redirect_to course_path(id: params[:course_id]), notice:  'Ya habías evaluado este curso, solo se puede una vez!'
     end
   end
 
-  # PATCH/PUT /course_evaluations/1
-  # PATCH/PUT /course_evaluations/1.json
-  def update
-    respond_to do |format|
-      if @course_evaluation.update(course_evaluation_params)
-        format.html { redirect_to @course_evaluation, notice: 'Course evaluation was successfully updated.' }
-        format.json { render :show, status: :ok, location: @course_evaluation }
-      else
-        format.html { render :edit }
-        format.json { render json: @course_evaluation.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /course_evaluations/1
-  # DELETE /course_evaluations/1.json
-  def destroy
-    @course_evaluation.destroy
-    respond_to do |format|
-      format.html { redirect_to course_evaluations_url, notice: 'Course evaluation was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -70,5 +39,12 @@ class CourseEvaluationsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def course_evaluation_params
       params.require(:course_evaluation).permit(:difficulty)
+    end
+
+    def modify_evaluated_course
+      course = Course.find(params[:course_id])
+      course.overall_difficulty = course.overall_difficulty + @course_evaluation.difficulty
+      course.evaluation_quantity = course.evaluation_quantity + 1
+      course.save
     end
 end

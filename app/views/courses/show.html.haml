@@ -3,30 +3,61 @@
 
   %h1.text-center.title= @course.name
 
-.row
-  .col-md-10.col-md-offset-1
-    %p.diff-label Dificultad general del curso:  
-    %p.diff-num= @course.overall_difficulty
-    %button.eval-button
-      Evaluar curso
-      %i.fa.fa-pencil-square-o
-    
-    .prof-list
-      %h3 Lista de profesores
+  .row
+    .col-md-10.col-md-offset-1
+      = link_to new_course_course_evaluation_path(course_id: @course.id), :class => 'eval-button' do
+        %i.fa.fa-pencil-square-o
+          Evaluar curso
+      %p.diff-label Cantidad de evaluaciones:
+      %p.diff-num= @course.evaluation_quantity
       %br
-      
-      .row
-        .col-md-10.col-md-offset-1
-          #list8
-            %ul
-              - @course_professors.each do |professor|
-                %li.text-center
-                  %a{:href => "#"}= professor.name + ' ' + professor.last_name
-      %hr
+      %p.diff-label Dificultad promedio del curso:
+      %p.diff-num= "(#{@difficulty_average} / 5)"
 
-    %section#comment-section
-      %h3.text-center Comentarios
-    %button.show-comments-button
-      Mostrar Comentarios
-      %i.fa.fa-comments
-    %hr
+      .prof-list
+        %h3 Lista de profesores
+        %br
+
+        .row
+          .col-md-10.col-md-offset-1
+            #list8
+              %ul
+                - @course_professors.each do |professor|
+                  %li.text-center
+                    %a{:href => "#"}= professor.name + ' ' + professor.last_name
+        %hr
+  .row
+    / Comment section
+    .col-md-10.col-md-offset-1.comments-column
+      %section#comment-section
+        %h4.text-center Comentarios
+        #comments
+      %button.show-comments-button{:action => "show", :value => "#{@course.id}"}
+        Mostrar Comentarios
+        %i.fa.fa-comments
+:javascript
+  $(".show-comments-button").click(function() {
+      var action = $(this).attr("action");
+      if(action == "show") {
+
+          /*
+          var articleId = $(this).attr("value");
+          $.ajax({
+            method: "get",
+            url: "/articles/"+articleId+"/comments",
+            async: false,
+            success: function(html){
+              $('#comments').html(html);
+              $('#comment-section').css("display","block");
+            }
+          });*/
+          $(this).attr("action", "hide");
+          $(this).html('Ocultar comentarios <i class="fa fa-sort-asc"></i>');
+      }else {
+          $('#comment-section').css("display", "none");
+          $(this).attr("action", "show");
+          $(this).html('Mostrar Comentarios <i class="fa fa-comments"></i>');
+      }
+  });
+
+
