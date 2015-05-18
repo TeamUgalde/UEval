@@ -1,25 +1,18 @@
 - model_class = CourseEvaluation
 .page-header
-  %h1=t '.title', :default => model_class.model_name.human.pluralize.titleize
-%table.table.table-striped
-  %thead
-    %tr
-      %th= model_class.human_attribute_name(:id)
-      %th= model_class.human_attribute_name(:difficulty)
-      %th= model_class.human_attribute_name(:user_id)
-      %th= model_class.human_attribute_name(:course_id)
-      %th= model_class.human_attribute_name(:created_at)
-      %th=t '.actions', :default => t("helpers.actions")
-  %tbody
-    - @course_evaluations.each do |course_evaluation|
-      %tr
-        %td= link_to course_evaluation.id, course_evaluation_path(course_evaluation)
-        %td= course_evaluation.difficulty
-        %td= course_evaluation.user_id
-        %td= course_evaluation.course_id
-        %td=l course_evaluation.created_at
-        %td
-          = link_to t('.edit', :default => t("helpers.links.edit")), edit_course_evaluation_path(course_evaluation), :class => 'btn btn-default btn-xs'
-          = link_to t('.destroy', :default => t("helpers.links.destroy")), course_evaluation_path(course_evaluation), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs btn-danger'
 
-= link_to t('.new', :default => t("helpers.links.new")), new_course_evaluation_path, :class => 'btn btn-primary'
+.row
+  .col-md-10.col-md-offset-1
+    %ul#rating
+      %li
+        %a{:href => "#"} Muy facil
+      %li
+        %a{:href => "#"} Facil
+      %li
+        %a{:href => "#"} Normal
+      %li
+        %a{:href => "#"} Dificil
+      %li
+        %a{:href => "#"} Muy dificil
+
+%script{:src => "/assets/course_evaluations.js" }
