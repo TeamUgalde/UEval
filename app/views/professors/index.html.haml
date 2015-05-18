@@ -24,8 +24,8 @@
                   %line.bottom{:x1 => "300", :x2 => "-600", :y1 => "460", :y2 => "460"}
                   %line.right{:x1 => "300", :x2 => "300", :y1 => "0", :y2 => "1380"}
                 %h3.name= professor.name + ' ' + professor.last_name
-                %p.label Calificacion promedio
-                %p.score= professor.overall_score
+                %p.label Cantidad de evaluaciones
+                %p.quantity= professor.overall_score
   %hr
 
 %script{:src => "/assets/professors.js" }

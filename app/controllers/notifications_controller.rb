@@ -29,7 +29,7 @@ class NotificationsController < ApplicationController
         subjectAction = " ha sido rechazado!"
         descriptionAction = " que añadiste no cumple con las condiciones, está repetido o no es válido en la universidad:"
       end
-      if(params[:resource] == "professors")
+      if(params[:resource].to_s == "professors")
         resourceName = "El profesor "
         resource = Professor.find(params[:resource_id])
         last_name = resource.last_name
@@ -38,7 +38,7 @@ class NotificationsController < ApplicationController
         resource = Course.find(params[:resource_id])
         last_name = ""
       end
-      @subject = "El profesor #{resource.name} #{last_name} #{subjectAction}"
+      @subject = "#{resourceName} #{resource.name} #{last_name} #{subjectAction}"
       @description = "#{resourceName} #{descriptionAction} #{University.find(resource.school_id).name}!"
     end
 
