@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150518210519) do
+ActiveRecord::Schema.define(version: 20150519005016) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -70,6 +70,23 @@ ActiveRecord::Schema.define(version: 20150518210519) do
 
   add_index "notifications", ["user_id"], name: "index_notifications_on_user_id", using: :btree
 
+  create_table "professor_course_evaluations", force: :cascade do |t|
+    t.integer  "professor_id"
+    t.integer  "course_id"
+    t.integer  "evaluation_quantity",         default: 0
+    t.integer  "overall_arrival_puntuality",  default: 0
+    t.integer  "overall_feedback_puntuality", default: 0
+    t.integer  "overall_knowledge",           default: 0
+    t.integer  "overall_addresses_question",  default: 0
+    t.integer  "overall_learning_interest",   default: 0
+    t.integer  "overall_difficulty",          default: 0
+    t.integer  "overall_clearness",           default: 0
+    t.integer  "overall_respect",             default: 0
+    t.float    "overall_score",               default: 0.0
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
+  end
+
   create_table "professor_evaluations", force: :cascade do |t|
     t.integer  "arrival_puntuality"
     t.integer  "feedback_puntuality"
@@ -79,12 +96,12 @@ ActiveRecord::Schema.define(version: 20150518210519) do
     t.integer  "difficulty"
     t.integer  "clearness"
     t.integer  "respectful"
-    t.string   "course_name"
     t.float    "overall_score"
     t.integer  "user_id"
     t.integer  "professor_id"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
+    t.integer  "course_id"
   end
 
   add_index "professor_evaluations", ["professor_id"], name: "index_professor_evaluations_on_professor_id", using: :btree
@@ -93,12 +110,21 @@ ActiveRecord::Schema.define(version: 20150518210519) do
   create_table "professors", force: :cascade do |t|
     t.string   "name"
     t.string   "last_name"
-    t.float    "overall_score"
+    t.float    "overall_score",               default: 0.0
     t.integer  "school_id"
-    t.datetime "created_at",                        null: false
-    t.datetime "updated_at",                        null: false
-    t.string   "state",         default: "pending"
+    t.datetime "created_at",                                      null: false
+    t.datetime "updated_at",                                      null: false
+    t.string   "state",                       default: "pending"
     t.integer  "creator_id"
+    t.integer  "evaluation_quantity",         default: 0
+    t.integer  "overall_arrival_puntuality",  default: 0
+    t.integer  "overall_feedback_puntuality", default: 0
+    t.integer  "overall_knowledge",           default: 0
+    t.integer  "overall_addresses_questions", default: 0
+    t.integer  "overall_learning_interest",   default: 0
+    t.integer  "overall_difficulty",          default: 0
+    t.integer  "overall_clearness",           default: 0
+    t.integer  "overall_respect",             default: 0
   end
 
   add_index "professors", ["school_id"], name: "index_professors_on_school_id", using: :btree
