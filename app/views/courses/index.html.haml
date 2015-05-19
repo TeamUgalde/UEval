@@ -24,8 +24,13 @@
                   %line.bottom{:x1 => "300", :x2 => "-600", :y1 => "460", :y2 => "460"}
                   %line.right{:x1 => "300", :x2 => "300", :y1 => "0", :y2 => "1380"}
                 %h3.name= course.name
-                %p.label Cantidad de evaluaciones:
-                %p.quantity= course.evaluation_quantity
+                %p.label Dificultad:
+                - evalQuantity = course.evaluation_quantity
+                - if evalQuantity > 0
+                  - average = (course.overall_difficulty + 0.0)/evalQuantity
+                -else
+                  - average = 0
+                %p.quantity= average
   %hr
 
 %script{:src => "/assets/courses.js" }

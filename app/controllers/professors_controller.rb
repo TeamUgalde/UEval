@@ -2,8 +2,7 @@ class ProfessorsController < ApplicationController
   before_action :set_professor, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :edit, :update, :index_pending]
 
-  respond_to :json
-  respond_to :html
+  helper_method :calculate_overall
 
   # GET /professors
   # GET /professors.json
@@ -69,10 +68,20 @@ class ProfessorsController < ApplicationController
 
   def show_professor_course_evaluation
     @professor_course_evaluation = ProfessorCourseEvaluation.find(params[:id])
+    @eq = @professor_course_evaluation.evaluation_quantity
     professor = Professor.find(@professor_course_evaluation.professor_id)
     @professor_name = "#{professor.name} #{professor.last_name}"
     course = Course.find(@professor_course_evaluation.course_id)
     @course_name = course.name
+  end
+
+  def calculate_overall(overall_parameter, evaluation_quantity)
+    if evaluation_quantity > 0
+      res = (overall_parameter + 0.0) / evaluation_quantity
+    else
+      res = 0
+    end
+    return res
   end
 
   # PATCH/PUT /professors/1

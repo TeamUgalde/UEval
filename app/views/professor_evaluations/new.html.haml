@@ -1,4 +1,7 @@
 - model_class = ProfessorEvaluation
-.page-header
-  %h1=t '.title', :default => ['Nueva evaluación de profesor'], :model => model_class.model_name.human.titleize
-= render :partial => "form"
+.row
+  .page-header
+    %h1.title.text-center
+      - p = Professor.find(params[:professor_id])
+      = "Evaluación para #{p.name} #{p.last_name}"
+  = render :partial => "form"

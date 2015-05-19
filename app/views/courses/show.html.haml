@@ -1,19 +1,17 @@
-- model_class = Course
-.page-header
-
-  %h1.text-center.title= @course.name
-  %br
-  %hr
+.row
+  .col-md-10.col-md-offset-1
+    .page-header
+      %h1.text-center.title= @course.name
+    %hr
   .row
     .col-md-10.col-md-offset-1
-      = link_to new_course_course_evaluation_path(course_id: @course.id), :class => 'eval-button' do
+      = link_to new_course_course_evaluation_path(course_id: @course.id), :class => 'eval-button add-button' do
         %i.fa.fa-pencil-square-o
-          Evaluar curso
-      %p.diff-label Cantidad de evaluaciones:
-      %p.diff-num= @course.evaluation_quantity
-      %br
+          Calificar dificultad
+      %div.clear
+      %hr
       %p.diff-label Dificultad promedio del curso:
-      %p.diff-num= "(#{@difficulty_average} / 5)"
+      %p.diff-num= "(#{@difficulty_average} / 5.0)"
       %br
       .prof-list
         %h3 Lista de profesores
