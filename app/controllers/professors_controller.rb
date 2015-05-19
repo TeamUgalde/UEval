@@ -64,7 +64,7 @@ class ProfessorsController < ApplicationController
   def show_professor_course_evaluation
     @professor_course_evaluation = ProfessorCourseEvaluation.find(params[:id])
     @eq = @professor_course_evaluation.evaluation_quantity
-    professor = Professor.find(@professor_course_evaluation.professor_id)
+    professor = Professor.find(@professor_course_evaluation.professor_id)]
     @professor_name = "#{professor.name} #{professor.last_name}"
     course = Course.find(@professor_course_evaluation.course_id)
     @course_name = course.name

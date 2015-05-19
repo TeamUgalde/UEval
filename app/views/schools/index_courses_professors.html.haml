@@ -2,16 +2,17 @@
 .row
   .col-md-10.col-md-offset-1
     %div{:role => "tabpanel", class: 'horizontal-tabs'}
-      / Nav tabs
       %ul.nav.nav-tabs{:role => "tablist"}
         %li.active.school-tab{:role => "presentation", resource: 'courses'}
           %a{"aria-controls" => "course", "data-toggle" => "tab", :href => "#courses", :role => "tab"} Cursos
         %li.school-tab{:role => "presentation", resource: 'professors'}
           %a{"aria-controls" => "professor", "data-toggle" => "tab", :href => "#professors", :role => "tab"} Profesores
 
-      / Tab panes
       .tab-content
         #courses.tab-pane.active{:role => "tabpanel"} No hay cursos en esta escuela
         #professors.tab-pane{:role => "tabpanel"} No hay profesores en esta escuela
+  
+    = link_to 'Atras', university_schools_path(university_id: School.find(@school_id).university_id), :class => 'btn btn-default'
+    %hr
 
 %script{:src => "/assets/school_tabs.js" }

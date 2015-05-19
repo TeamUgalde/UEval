@@ -69,6 +69,9 @@
         Mostrar Comentarios
         %i.fa.fa-comments
   %hr
+  
+= link_to 'Atras', school_courses_professors_path(school_id: @professor.school_id), :class => 'btn btn-default'
+%hr
 
 :javascript
   $(".show-comments-button").click(function() {
