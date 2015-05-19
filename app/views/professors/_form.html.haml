@@ -1,18 +1,21 @@
-= form_for @professor, url: school_professors_path(school_id: @school_id), html: { class: "form form-horizontal professor" } do |f|
-  .form-group
-    = f.label :name, 'Nombre del profesor', class: 'control-label'
-    .controls
-      = f.text_field :name, class: 'form-control', required: true
-    = error_span(@professor[:name])
-  .form-group
-    = f.label :last_name, 'Apellido del profesor', class: 'control-label'
-    .controls
-      = f.text_field :last_name, class: 'form-control', required: true
-    = error_span(@professor[:last_name])
-  .form-group
-    = f.label :professor_courses, 'Seleccione los cursos que imparte el profesor', class: 'control-label'
-    .controls
-      = f.select :professor_courses, options_for_select(@courses.collect {|c| [ c.name, c.id ] }),{}, {:multiple => true, :style => "width:450px;" }
-    = error_span(@professor[:overall_score])
-  = f.submit 'Agregar profesor',class: 'btn btn-primary'
-  = link_to t('.cancel', :default => t('Cancelar')), school_courses_professors_path, :class => 'btn btn-default'
+.rw
+  .col-md-6.col-md-offset-3
+    = form_for @professor, url: school_professors_path(school_id: @school_id), html: { class: "form form-horizontal professor" } do |f|
+      .form-group
+        = f.label :name, 'Nombre del profesor', class: 'control-label'
+        .controls
+          = f.text_field :name, class: 'form-control', required: true
+        = error_span(@professor[:name])
+      .form-group
+        = f.label :last_name, 'Apellido del profesor', class: 'control-label'
+        .controls
+          = f.text_field :last_name, class: 'form-control', required: true
+        = error_span(@professor[:last_name])
+      .form-group
+        = f.label :professor_courses, 'Seleccione los cursos que imparte el profesor', class: 'control-label'
+        .controls
+          = f.select :professor_courses, options_for_select(@courses.collect {|c| [ c.name, c.id ] }),{}, {:multiple => true, :style => "width:450px;" }
+        = error_span(@professor[:overall_score])
+      %hr
+      = f.submit 'Agregar profesor',class: 'btn btn-primary'
+      = link_to t('.cancel', :default => t('Cancelar')), school_courses_professors_path, :class => 'btn btn-default'

@@ -1,3 +1,48 @@
 // Place all the styles related to the ProfessorEvaluations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/*
+select {
+    padding: 3px;
+    margin: 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    background: #f8f8f8;
+    color: #888;
+    border: none;
+    outline: none;
+    display: inline-block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    select {padding-right:18px}
+}*/
+
+.styled-select {
+   width: 100%;
+   overflow: hidden;
+   background: #F8F8F8;
+   border: 1px solid #DDDDDD;
+   height: 100%;
+   border-radius:2px;
+ }
+ 
+.styled-select select {
+  width: 100%;
+  border: 0;
+  line-height: 1.5;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+  appearance: none;
+  background: transparent url("http://i.imgur.com/BipJkdI.png") no-repeat scroll 100% 4px;
+}
