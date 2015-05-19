@@ -16,11 +16,11 @@ Rails.application.routes.draw do
     resources :schools, only: :index do
       resources :courses do
         resources :course_evaluations, only: [:new, :create]
-        resources :comments, only: [:index, :new, :create, :destroy]
+        resources :comments, only: [:index, :new, :create, :destroy, :update]
       end
       resources :professors do
         resources :professor_evaluations
-        resources :comments, only: [:index, :new, :create, :destroy]
+        resources :comments, only: [:index, :new, :create, :destroy, :update]
       end
     end
   end

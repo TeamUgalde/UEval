@@ -19,9 +19,6 @@
 //= require angular
 //= require third_party/angularapp
 //= require comments
-//= require course_evaluations
 //= require courses
 //= require pages
-//= require professor_evaluations
 //= require professors
-//= require universities

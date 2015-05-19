@@ -36,12 +36,13 @@
   margin-bottom: 25px;
 }
 
-.delete-comment-button {
+.send-comment-button {
   float: right;
 }
 
-.send-comment-button {
+.flag-comment-button, .delete-comment-button, .flag-button {
   float: right;
+  color: darkred;
 }
 
 #comment-section {
@@ -54,7 +55,6 @@
 }
 
 .comments-column {
-  width: 100%;
   margin-bottom: 20px;
 }
 
@@ -65,4 +65,13 @@
 
 #comments {
   width: 100%;
+}
+
+.sub-text {
+  color: #aaa;
+  font-family: verdana;
+  font-size: 11px;
+  float: right;
+  clear: both;
+  margin-right: 10px;
 }
