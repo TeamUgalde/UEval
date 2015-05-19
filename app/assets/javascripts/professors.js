@@ -15,7 +15,6 @@ var ready = function() {
         var sortByValue = $(this).attr('data-sort-by');
         $containerProfessors.isotope({ sortBy: sortByValue });
     });
-
 }
 
 $(document).on('page:load', ready);
