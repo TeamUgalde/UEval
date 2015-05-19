@@ -1,4 +1,4 @@
-var ready = function() {
+
 
     $('body').on('click', '.accept-button', function() {
         var resource =  $(this).attr('resource');
@@ -75,14 +75,10 @@ var ready = function() {
             window.location.hash = this.hash;
             $('html,body').scrollTop(scrollmem);
         });
-
         $(".active").trigger('click');
     });
 
 
 
 
-}
 
-$(document).on('page:load', ready);
-$(document).ready(ready);

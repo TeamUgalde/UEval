@@ -1,0 +1,27 @@
+.page-header
+  %h1.text-center
+    %i.fa.fa-book Escuelas
+  %hr
+
+  #sorts.button-group
+    %button.button.is-checked{"data-sort-by" => "original-order"} Orden Original
+    %button.button{"data-sort-by" => "name"} Ordenar por Nombre
+
+  %hr
+  .row
+    .col-md-10.col-md-offset-1{"ng-app" => "UEval", "ng-controller" => "MainController"}
+      .isotope
+        - url_escaped_href = school_courses_professors_path('{{ s.id}}')
+        - my_href = URI::unescape(url_escaped_href)
+        = link_to my_href, {"ng-repeat" => "s in schools"} do
+          .element-item
+            %svg
+              %line.top{:x1 => "0", :x2 => "900", :y1 => "0", :y2 => "0"}
+              %line.left{:x1 => "0", :x2 => "0", :y1 => "460", :y2 => "-920"}
+              %line.bottom{:x1 => "300", :x2 => "-600", :y1 => "460", :y2 => "460"}
+              %line.right{:x1 => "300", :x2 => "300", :y1 => "0", :y2 => "1380"}
+            %h3.name
+              {{s.name}}
+  %hr
+
+%script{:src => "/assets/schools.js" }

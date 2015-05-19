@@ -33,7 +33,7 @@ class ProfessorEvaluationsController < ApplicationController
   def create
     professor_id = params[:professor_id].to_i
     @post_params = post_params_array
-    evaluated_course_id = params[:course_id].to_i
+    evaluated_course_id = professor_evaluation_params[:course_id].to_i
     evaluation = ProfessorEvaluation.where(['user_id = ? and professor_id = ? and course_id = ?',current_user.id, professor_id, evaluated_course_id])
     if evaluation.blank?
       @professor_evaluation = ProfessorEvaluation.new(professor_evaluation_params)
@@ -43,12 +43,12 @@ class ProfessorEvaluationsController < ApplicationController
       if @professor_evaluation.save
         modify_evaluated_professor
         modify_professor_course_evaluations
-        redirect_to professor_path(id: professor_id), notice:  'Se ha evaluado el profesor para el curso seleccionado!'
+        redirect_to professor_path(id: professor_id), notice:  evaluation
       else
         render :new, notice:  'Hubo un error al evaluar'
       end
     else
-      redirect_to professor_path(id: professor_id), notice:  'Ya habías evaluado este profesor en este curso, solo se puede una vez!'
+      redirect_to professor_path(id: professor_id), notice:  'Ya habías evaluado a este profesor en dicho curso, solo se puede una vez!'
     end
   end
 

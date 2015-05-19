@@ -19,7 +19,7 @@
           %td Calificación general
           %td.text-center= calculate_overall(@professor_course_evaluation.overall_score, @eq)
         %tr
-          %td Puntual llegando a clases temprano
+          %td Puntual llegando a clases
           %td.text-center= calculate_overall(@professor_course_evaluation.overall_arrival_puntuality, @eq)
         %tr
           %td Puntual entregando evaluaciones revisadas
@@ -31,7 +31,7 @@
           %td Atiende dudas de los estudiantes
           %td.text-center= calculate_overall(@professor_course_evaluation.overall_addresses_question, @eq)
         %tr
-          %td Se intereza por el aprendizaje del estudiante
+          %td Se interesa por el aprendizaje del estudiante
           %td.text-center= calculate_overall(@professor_course_evaluation.overall_learning_interest, @eq)
         %tr
           %td Dificultad del curso con este profesor

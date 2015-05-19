@@ -5,9 +5,10 @@ class CommentsController < ApplicationController
   # GET /comments
   # GET /comments.json
   def index
-    commentable = find_commentable
-    @comments = commentable.comments
-    @commentableName = commentable.class.name
+    @commentable = find_commentable
+    @comments = @commentable.comments
+    @commentableName = @commentable.class.name
+    render layout: false
   end
 
   # GET /comments/new
@@ -15,39 +16,28 @@ class CommentsController < ApplicationController
     @comment = Comment.new
   end
 
-  # GET /comments/1/edit
-  def edit
-  end
-
   # POST /comments
   # POST /comments.json
   def create
-    @comment = Comment.new(comment_params)
-    path = find_redirect_route
-    respond_to do |format|
-      if @comment.save
-        format.html { redirect_to  path, notice: 'Comment was successfully created.' }
-        format.json { render :show, status: :created, location: @comment }
-      else
-        format.html { render :new }
-        format.json { render json: path.errors, status: :unprocessable_entity }
-      end
-    end
+    commentable = find_commentable
+    cont = params[:content]
+    @comment = Comment.new(user_id: current_user.id, commentable_id: commentable.id, commentable_type: commentable.class.name ,content: cont, flagged: false)
+    @comment.save
+    render :inline => ""
   end
 
   # DELETE /comments/1
   # DELETE /comments/1.json
   def destroy
-    if @comment.commentable_type == 'Professor'
-      path = "/professors/#{@comment.commentable_id}/comments"
-    else
-      path = "/courses/#{@comment.commentable_id}/comments"
-    end
-    @comment.destroy
-    respond_to do |format|
-      format.html { redirect_to path, notice: 'Comment was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    Comment.find(params[:id]).destroy
+    render :inline => ""
+  end
+
+  def update
+    comment = Comment.find(params[:id])
+    comment.flagged = true
+    comment.save
+    render :inline => ""
   end
 
   private

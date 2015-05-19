@@ -1,8 +1,9 @@
 class SchoolsController < ApplicationController
   before_action :set_school, only: [:show, :edit, :update, :destroy]
 
-  # GET /schools
-  # GET /schools.json
+  respond_to :json
+  respond_to :html
+
   def index
     university = University.find(params[:university_id])
     @schools = university.schools

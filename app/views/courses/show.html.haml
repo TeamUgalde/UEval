@@ -30,37 +30,10 @@
       %section#comment-section
         %h4.text-center Comentarios
         #comments
-      %button.show-comments-button{:action => "show", :value => "#{@course.id}"}
+      %button.show-comments-button{:action => "show", :value => "#{@course.id}", :resource => 'courses'}
         Mostrar Comentarios
         %i.fa.fa-comments
       %hr
       
 = link_to 'Atras', school_courses_professors_path(school_id: @course.school_id), :class => 'btn btn-default'
 %hr
-      
-:javascript
-  $(".show-comments-button").click(function() {
-      var action = $(this).attr("action");
-      if(action == "show") {
-
-          /*
-          var articleId = $(this).attr("value");
-          $.ajax({
-            method: "get",
-            url: "/articles/"+articleId+"/comments",
-            async: false,
-            success: function(html){
-              $('#comments').html(html);
-              $('#comment-section').css("display","block");
-            }
-          });*/
-          $(this).attr("action", "hide");
-          $(this).html('Ocultar comentarios <i class="fa fa-sort-asc"></i>');
-      }else {
-          $('#comment-section').css("display", "none");
-          $(this).attr("action", "show");
-          $(this).html('Mostrar Comentarios <i class="fa fa-comments"></i>');
-      }
-  });
-
-

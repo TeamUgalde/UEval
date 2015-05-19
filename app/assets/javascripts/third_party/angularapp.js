@@ -2,7 +2,7 @@ var app = angular.module('UEval',[]);
 
 var path;
 
-app.factory('notificationInfo', ['$http', function($http) {
+app.factory('schoolInfo', ['$http', function($http) {
 
     path = window.location+".json";
 
@@ -17,10 +17,10 @@ app.factory('notificationInfo', ['$http', function($http) {
 
 
 
-app.controller('MainController', ['$scope', 'notificationInfo', function($scope, notificationInfo) {
+app.controller('MainController', ['$scope', 'schoolInfo', function($scope, schoolInfo) {
 
-    notificationInfo.success(function(data){
-        $scope.notification = data;
+    schoolInfo.success(function(data){
+        $scope.schools = data;
     });
 
 }]);
