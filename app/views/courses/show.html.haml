@@ -21,9 +21,8 @@
               %ul
                 - @course_professors.each do |professor|
                   %li.text-center
-                    %h4
-                      = link_to professor_path(id: professor.id) do
-                        = professor.name + ' ' + professor.last_name
+                    = link_to professor_path(id: professor.id) do
+                      = professor.name + ' ' + professor.last_name
         %hr
   .row
     / Comment section

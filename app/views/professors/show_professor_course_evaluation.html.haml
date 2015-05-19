@@ -1,17 +1,42 @@
 .row
-  .col-md-6.col-md-offset-3
+  .col-md-8.col-md-offset-2
     %hr
+    %h1.text-center.title
+      Profesor: 
+      = @professor_name
+    %h1.text-center.title
+      Curso: 
+      = @course_name
     %hr
+
     %table.table.table-striped
       %thead
         %tr
-          %th
-            %h4 Criterio de evaluacion
-          %th
-            %h4 Calificacion promedio
+          %th Criterio de evaluacion
+          %th.text-center Calificacion promedio
+      %tbody
         %tr
-          %td
-            %h5 Puntualidad de llegada
-          %td
-            %h5
-
+          %td Puntual llegando a clases temprano
+          %td.text-center= @professor_course_evaluation.overall_arrival_puntuality
+        %tr
+          %td Puntual entregando evaluaciones revisadas
+          %td.text-center= @professor_course_evaluation.overall_feedback_puntuality
+        %tr
+          %td Conocimiento y dominio de la materia
+          %td.text-center= @professor_course_evaluation.overall_knowledge
+        %tr
+          %td Atiende dudas de los estudiantes
+          %td.text-center= @professor_course_evaluation.overall_addresses_question
+        %tr
+          %td Se intereza por el aprendizaje del estudiante
+          %td.text-center= @professor_course_evaluation.overall_learning_interest
+        %tr
+          %td Dificultad del curso con este profesor
+          %td.text-center= @professor_course_evaluation.overall_difficulty
+        %tr
+          %td Claridad de las explicaciones
+          %td.text-center= @professor_course_evaluation.overall_clearness
+        %tr
+          %td Respeto hacia los estudiantes
+          %td.text-center= @professor_course_evaluation.overall_respect
+    %hr
