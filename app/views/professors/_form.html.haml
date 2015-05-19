@@ -14,7 +14,7 @@
       .form-group
         = f.label :professor_courses, 'Seleccione los cursos que imparte el profesor', class: 'control-label'
         .controls
-          = f.select :professor_courses, options_for_select(@courses.collect {|c| [ c.name, c.id ] }),{}, {:multiple => true, :style => "width:450px;" }
+          = f.select :professor_courses, options_for_select(@courses.collect {|c| [ c.name, c.id ] }),{}, {:multiple => true, :style => "width:100%;" }
         = error_span(@professor[:overall_score])
       %hr
       = f.submit 'Agregar profesor',class: 'btn btn-primary'

@@ -68,10 +68,11 @@ class ProfessorsController < ApplicationController
   end
 
   def show_professor_course_evaluation
-    @professor = Professor.find(params[:professor_id])
-    @course = Course.find(params[:course_id])
-    @professor_course_evaluation = ProfessorCourseEvaluation.where(['professor_id = ? and course_id = ?', 65, 33]).limit(1).first
-
+    @professor_course_evaluation = ProfessorCourseEvaluation.find(params[:id])
+    professor = Professor.find(@professor_course_evaluation.professor_id)
+    @professor_name = "#{professor.name} #{professor.last_name}"
+    course = Course.find(@professor_course_evaluation.course_id)
+    @course_name = course.name
   end
 
   # PATCH/PUT /professors/1
