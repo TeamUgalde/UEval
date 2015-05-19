@@ -67,34 +67,20 @@ schools = School.create([
 
 
 courses = Course.create([
-                         {name: 'Estructura de Datos', overall_difficulty: 3.3,
-                         school_id: 1, state: 'accepted'},
-                         {name: 'Programacion Orientada a Objetos', overall_difficulty: 3.8,
-                         school_id: 1, state: 'accepted'},
-                         {name: 'Analisis de Algoritmos', overall_difficulty: 4.1,
-                         school_id: 1, state: 'accepted'},
-                         {name: 'Lenguajes de Programacion', overall_difficulty: 3.6,
-                         school_id: 1, state: 'accepted'},
-                         {name: 'Diseño de software', overall_difficulty: 4.2,
-                         school_id: 1, state: 'accepted'},
-                         {name: 'Administracion de Proyectos', overall_difficulty: 2.1,
-                         school_id: 1, state: 'accepted'},
-                         {name: 'Bases de Datos I', overall_difficulty: 4.5,
-                         school_id: 1, state: 'accepted'},
-                         {name: 'Introduccion a la Programacion', overall_difficulty: 2.4,
-                         school_id: 1, state: 'accepted'},
-                         {name: 'Taller de Programacion', overall_difficulty: 2.6,
-                         school_id: 1, state: 'accepted'},
-                         {name: 'Estadistica', overall_difficulty: 3.0,
-                         school_id: 2, state: 'accepted'},
-                         {name: 'Algebra Lineal', overall_difficulty: 3.7,
-                         school_id: 2, state: 'accepted'},
-                         {name: 'Calculo', overall_difficulty: 4.4,
-                         school_id: 2, state: 'accepted'},
-                         {name: 'Probabilidad', overall_difficulty: 2.7,
-                         school_id: 2, state: 'accepted'},
-                         {name: 'Matematica Discreta', overall_difficulty: 4.7,
-                         school_id: 2, state: 'accepted'}
+                         {name: 'Estructura de Datos', school_id: 1, state: 'accepted'},
+                         {name: 'Programacion Orientada a Objetos', school_id: 1, state: 'accepted'},
+                         {name: 'Analisis de Algoritmos', school_id: 1, state: 'accepted'},
+                         {name: 'Lenguajes de Programacion', school_id: 1, state: 'accepted'},
+                         {name: 'Diseño de software', school_id: 1, state: 'accepted'},
+                         {name: 'Administracion de Proyectos', school_id: 1, state: 'accepted'},
+                         {name: 'Bases de Datos I', school_id: 1, state: 'accepted'},
+                         {name: 'Introduccion a la Programacion', school_id: 1, state: 'accepted'},
+                         {name: 'Taller de Programacion', school_id: 1, state: 'accepted'},
+                         {name: 'Estadistica', school_id: 2, state: 'accepted'},
+                         {name: 'Algebra Lineal', school_id: 2, state: 'accepted'},
+                         {name: 'Calculo', school_id: 2, state: 'accepted'},
+                         {name: 'Probabilidad', school_id: 2, state: 'accepted'},
+                         {name: 'Matematica Discreta', school_id: 2, state: 'accepted'}
                          ])
 =end                         
 
