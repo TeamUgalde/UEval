@@ -1,63 +1,66 @@
-= form_for @professor_evaluation, html: { class: "form form-horizontal professor_evaluation" } do |f|
-  .form-group
-    = f.label :arrival_puntuality, class: 'control-label'
-    .controls
-      = f.text_field :arrival_puntuality, class: 'form-control', required: true
-    = error_span(@professor_evaluation[:arrival_puntuality])
-  .form-group
-    = f.label :feedback_puntuality, class: 'control-label'
-    .controls
-      = f.text_field :feedback_puntuality, class: 'form-control', required: true
-    = error_span(@professor_evaluation[:feedback_puntuality])
-  .form-group
-    = f.label :knowledge, class: 'control-label'
-    .controls
-      = f.text_field :knowledge, class: 'form-control', required: true
-    = error_span(@professor_evaluation[:knowledge])
-  .form-group
-    = f.label :addresses_questions, class: 'control-label'
-    .controls
-      = f.text_field :addresses_questions, class: 'form-control', required: true
-    = error_span(@professor_evaluation[:addresses_questions])
-  .form-group
-    = f.label :learning_interest, class: 'control-label'
-    .controls
-      = f.text_field :learning_interest, class: 'form-control', required: true
-    = error_span(@professor_evaluation[:learning_interest])
-  .form-group
-    = f.label :difficulty, class: 'control-label'
-    .controls
-      = f.text_field :difficulty, class: 'form-control', required: true
-    = error_span(@professor_evaluation[:difficulty])
-  .form-group
-    = f.label :clearness, class: 'control-label'
-    .controls
-      = f.text_field :clearness, class: 'form-control', required: true
-    = error_span(@professor_evaluation[:clearness])
-  .form-group
-    = f.label :respectful, class: 'control-label'
-    .controls
-      = f.text_field :respectful, class: 'form-control', required: true
-    = error_span(@professor_evaluation[:respectful])
-  .form-group
-    = f.label :course_name, class: 'control-label'
-    .controls
-      = f.text_field :course_name, class: 'form-control', required: true
-    = error_span(@professor_evaluation[:course_name])
-  .form-group
-    = f.label :overall_score, class: 'control-label'
-    .controls
-      = f.text_field :overall_score, class: 'form-control', required: true
-    = error_span(@professor_evaluation[:overall_score])
-  .form-group
-    = f.label :user_id, class: 'control-label'
-    .controls
-      = f.text_field :user_id, class: 'form-control', required: true
-    = error_span(@professor_evaluation[:user_id])
-  .form-group
-    = f.label :professor_id, class: 'control-label'
-    .controls
-      = f.text_field :professor_id, class: 'form-control', required: true
-    = error_span(@professor_evaluation[:professor_id])
-  = f.submit nil,class: 'btn btn-primary'
-  = link_to t('.cancel', :default => t("helpers.links.cancel")), professor_evaluations_path, :class => 'btn btn-default'
+.row
+  .col-md-10.col-md-offset-1
+    = form_for @professor_evaluation, url: professor_professor_evaluations_path, html: { class: "form form-horizontal professor_evaluation" } do |f|
+      .row
+        .col-md-4.col-md-offset-4
+          .form-group
+            = f.label :course_id, 'Seleccione el curso que desea evaluar', class: 'control-label'
+            .controls
+              = f.select :course_id, options_for_select(@course_list.collect {|c| [ c.name, c.id ] }),{}, {}
+            = error_span(@professor_evaluation[:overall_score])
+      %hr
+      .row
+        .col-md-4.col-md-offset-1
+          .form-group
+            = f.label :arrival_puntuality, 'Puntual llegando a clases', class: 'control-label'
+            .controls
+              = f.select :arrival_puntuality, options_for_select([['Nunca',1],['Casi nunca',2],['A veces',3],['Casi siempre',4],['Siempre',5]]),{}, {:class => "selectpicker" }
+            = error_span(@professor_evaluation[:overall_score])
+
+          .form-group
+            = f.label :feedback_puntuality, 'Puntual entregando evaluaciones revisadas', class: 'control-label'
+            .controls
+              = f.select :feedback_puntuality, options_for_select([['Nunca',1],['Casi nunca',2],['A veces',3],['Casi siempre',4],['Siempre',5]]),{}, {:class => "selectpicker" }
+            = error_span(@professor_evaluation[:overall_score])
+
+          .form-group
+            = f.label :knowledge, 'Conocimiento y dominio de la materia', class: 'control-label'
+            .controls
+              = f.select :knowledge, options_for_select([['Nada',1],['Poco',2],['Regular',3],['Mucho',4],['Dominio total',5]]),{}, {:class => "selectpicker" }
+            = error_span(@professor_evaluation[:overall_score])
+
+          .form-group
+            = f.label :addresses_questions, 'Atiende dudas de los estudiantes', class: 'control-label'
+            .controls
+              = f.select :addresses_questions, options_for_select([['Nunca',1],['Casi nunca',2],['A veces',3],['Casi siempre',4],['Siempre',5]]),{}, {:class => "selectpicker" }
+            = error_span(@professor_evaluation[:overall_score])
+
+        .col-md-4.col-md-offset-1
+          .form-group
+            = f.label :learning_interest, 'Se interesa por el aprendizaje del estudiante', class: 'control-label'
+            .controls
+              = f.select :learning_interest, options_for_select([['Nada',1],['Muy poco',2],['Poco',3],['Regular',4],['Mucho',5]]),{}, {:class => "selectpicker" }
+            = error_span(@professor_evaluation[:overall_score])
+
+          .form-group
+            = f.label :difficulty, 'Dificultad de curso con este profesor', class: 'control-label'
+            .controls
+              = f.select :difficulty, options_for_select([['Muy fácil',1],['Fácil',2],['Regular',3],['Difícil',4],['Muy difícil',5]]),{}, {:class => "selectpicker" }
+            = error_span(@professor_evaluation[:overall_score])
+
+          .form-group
+            = f.label :clearness, 'Las explicaciones son', class: 'control-label'
+            .controls
+              = f.select :clearness, options_for_select([['No se le entiende nada',1],['Muy confusas',2],['Confusas',3],['Entendibles',4],['Excelentes',5]]),{}, {:class => "selectpicker" }
+            = error_span(@professor_evaluation[:overall_score])
+
+          .form-group
+            = f.label :respectful, 'Respetuoso (a)', class: 'control-label'
+            .controls
+              = f.select :respectful, options_for_select([['Nunca',1],['Casi nunca',2],['A veces',3],['Casi siempre',4],['Siempre',5]]),{}, {:class => "selectpicker" }
+            = error_span(@professor_evaluation[:overall_score])
+      %hr
+      .row
+        = f.submit 'Añadir evaluación',class: 'btn btn-primary'
+        = link_to t('.cancel', :default => t('Cancelar')), professor_path(id: @professor_id), :class => 'btn btn-default'
+      %hr

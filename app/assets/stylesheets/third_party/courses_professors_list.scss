@@ -1,0 +1,56 @@
+
+#list8 {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#list8 ul {
+  list-style-type: none !important;
+  width: 100%;
+
+}
+
+#list8 ul li {
+  font-weight: bold;
+  padding: 2px;
+}
+
+#list8 ul li a {
+  display: block;
+  width: 70%;
+  background-color: #588C7E;
+  border-left: 6px solid #33564c;
+  border-right: 6px solid #33564c;
+  padding-left: 10px;
+  text-decoration: none;
+  color: #eee;
+  padding: 6px;
+}
+
+#list8 ul li a:hover {
+  -moz-transform:rotate(3deg);
+  -moz-box-shadow:10px 10px 20px #000000;
+  -webkit-transform:rotate(3deg);
+  -webkit-box-shadow:10px 10px 20px #000000;
+  transform: rotate(3deg);
+  box-shadow: 10px 10px 20px #000000;
+}
+
+.diff-label {
+  font-size: 1.7em;
+  float: left;
+  margin-right: 20px;
+}
+
+.diff-num {
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+.eval-button {
+  float: right;
+}
+
+.prof-list {
+  clear: both;
+}

@@ -6,7 +6,7 @@ class CoursesController < ApplicationController
   # GET /courses.json
   def index
     school = School.find(params[:school_id])
-    @courses = school.courses.order("overall_difficulty DESC")
+    @courses = school.courses.order("evaluation_quantity DESC")
     render layout: false
   end
 
@@ -14,7 +14,12 @@ class CoursesController < ApplicationController
   # GET /courses/1.json
   def show
     @course = Course.find(params[:id])
-    @course_professors = @course.professors
+    if(@course.evaluation_quantity > 0)
+      @difficulty_average = ((@course.overall_difficulty+0.0) / @course.evaluation_quantity).round(1)
+    else
+      @difficulty_average = 0
+    end
+    @course_professors = @course.professors.where(state: 'accepted')
   end
 
   # GET /courses/new
@@ -38,7 +43,6 @@ class CoursesController < ApplicationController
   # POST /courses.json
   def create
     @course = Course.new(course_params)
-    @course.overall_difficulty = 0
     @course.school_id = params[:school_id]
     @course.creator_id = current_user.id
     respond_to do |format|

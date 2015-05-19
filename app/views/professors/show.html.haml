@@ -5,28 +5,55 @@
 
 .row
   .col-md-10.col-md-offset-1
-    %p.diff-label Calificacion promedio del profesor:  
-    %p.diff-num= @professor.overall_score
-    %button.eval-button
-      Evaluar profesor
+    = link_to new_professor_professor_evaluation_path(professor_id: @professor.id), :class => 'eval-button' do
       %i.fa.fa-pencil-square-o
+        Evaluar profesor
+    %p.diff-label Calificacion promedio del profesor :
+    %p.diff-num= " (#{@overall_score_average} / 5.0)"
     
     .prof-list
       %h3 Lista de cursos impartidos:
       %br
-      
+
       .row
         .col-md-10.col-md-offset-1
           #list8
             %ul
               - @professor_courses.each do |course|
                 %li.text-center
-                  %a{:href => "#"}= course.name
-      %hr
+                  = link_to course_path(id: course.id) do
+                    = course.name
+  .row
+    / Comment section
+    .col-md-10.col-md-offset-1.comments-column
+      %section#comment-section
+        %h4.text-center Comentarios
+        #comments
+      %button.show-comments-button{:action => "show", :value => "#{@professor.id}"}
+        Mostrar Comentarios
+        %i.fa.fa-comments
 
-    %section#comment-section
-      %h3.text-center Comentarios
-    %button.show-comments-button
-      Mostrar Comentarios
-      %i.fa.fa-comments
-    %hr
+:javascript
+  $(".show-comments-button").click(function() {
+      var action = $(this).attr("action");
+      if(action == "show") {
+
+          /*
+          var articleId = $(this).attr("value");
+          $.ajax({
+            method: "get",
+            url: "/articles/"+articleId+"/comments",
+            async: false,
+            success: function(html){
+              $('#comments').html(html);
+              $('#comment-section').css("display","block");
+            }
+          });*/
+          $(this).attr("action", "hide");
+          $(this).html('Ocultar comentarios <i class="fa fa-sort-asc"></i>');
+      }else {
+          $('#comment-section').css("display", "none");
+          $(this).attr("action", "show");
+          $(this).html('Mostrar Comentarios <i class="fa fa-comments"></i>');
+      }
+  });

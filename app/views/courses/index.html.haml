@@ -24,8 +24,8 @@
                   %line.bottom{:x1 => "300", :x2 => "-600", :y1 => "460", :y2 => "460"}
                   %line.right{:x1 => "300", :x2 => "300", :y1 => "0", :y2 => "1380"}
                 %h3.name= course.name
-                %p.label Dificultad promedio
-                %p.difficulty= course.overall_difficulty
+                %p.label Cantidad de evaluaciones:
+                %p.quantity= course.evaluation_quantity
   %hr
 
 %script{:src => "/assets/courses.js" }
