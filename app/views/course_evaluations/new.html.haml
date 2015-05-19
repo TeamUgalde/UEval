@@ -1,4 +1,6 @@
 - model_class = CourseEvaluation
 .page-header
-  %h1=t '.title', :default => ['Nueva evaluación de curso'], :model => model_class.model_name.human.titleize
+  %h1.title.text-center
+    - c = Course.find(params[:course_id])
+    = "Calificación para #{c.name}"
 = render :partial => "form"
