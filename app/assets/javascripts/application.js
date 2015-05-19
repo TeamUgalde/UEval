@@ -16,6 +16,8 @@
 //= require turbolinks
 //= require third_party/isotope
 //= require bootstrap
+//= require angular
+//= require third_party/angularapp
 //= require comments
 //= require course_evaluations
 //= require courses
