@@ -17,12 +17,7 @@ class ProfessorsController < ApplicationController
   def show
     @professor = Professor.find(params[:id])
     @professor_courses = @professor.courses.where(state: 'accepted')
-    evaluations_quantity = @professor.evaluation_quantity
-    if evaluations_quantity > 0
-      @overall_score_average = (@professor.overall_score / evaluations_quantity).round(1)
-    else
-      @overall_score_average = 0
-    end
+    @eq = @professor.evaluation_quantity
   end
 
   # GET /professors/new
@@ -69,7 +64,7 @@ class ProfessorsController < ApplicationController
   def show_professor_course_evaluation
     @professor_course_evaluation = ProfessorCourseEvaluation.find(params[:id])
     @eq = @professor_course_evaluation.evaluation_quantity
-    professor = Professor.find(@professor_course_evaluation.professor_id)
+    professor = Professor.find(@professor_course_evaluation.professor_id)]
     @professor_name = "#{professor.name} #{professor.last_name}"
     course = Course.find(@professor_course_evaluation.course_id)
     @course_name = course.name
@@ -81,7 +76,7 @@ class ProfessorsController < ApplicationController
     else
       res = 0
     end
-    return res
+    return res.round(1)
   end
 
   # PATCH/PUT /professors/1
