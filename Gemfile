@@ -58,3 +58,6 @@ gem 'devise-bootstrap-views'
 
 #Use facebook omni-auth
 gem 'omniauth-facebook'
+
+#Use angularjs
+gem 'angularjs-rails'

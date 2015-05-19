@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   
   get '/schools/:school_id/index_courses_professors', to: 'schools#index_courses_professors', as: 'school_courses_professors'
 
+  get '/professor_course_evaluations/:id', to: 'professors#show_professor_course_evaluation', as: 'professor_course_evaluation'
+
   resources :universities, only: :index, shallow: true do
     resources :schools, only: :index do
       resources :courses do

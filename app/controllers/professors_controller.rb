@@ -2,6 +2,9 @@ class ProfessorsController < ApplicationController
   before_action :set_professor, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :edit, :update, :index_pending]
 
+  respond_to :json
+  respond_to :html
+
   # GET /professors
   # GET /professors.json
   def index
@@ -65,7 +68,9 @@ class ProfessorsController < ApplicationController
   end
 
   def show_professor_course_evaluation
-
+    @professor = Professor.find(params[:professor_id])
+    @course = Course.find(params[:course_id])
+    @professor_course_evaluation = ProfessorCourseEvaluation.where(['professor_id = ? and course_id = ?', 65, 33]).limit(1).first
 
   end
 
