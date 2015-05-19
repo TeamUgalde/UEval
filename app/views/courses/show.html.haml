@@ -8,6 +8,8 @@
       = link_to new_course_course_evaluation_path(course_id: @course.id), :class => 'eval-button add-button' do
         %i.fa.fa-pencil-square-o
           Calificar dificultad
+      %div.clear
+      %hr
       %p.diff-label Dificultad promedio del curso:
       %p.diff-num= "(#{@difficulty_average} / 5.0)"
       %br

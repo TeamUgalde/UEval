@@ -13,30 +13,33 @@
       %thead
         %tr
           %th Criterio de evaluacion
-          %th.text-center Calificacion promedio
+          %th.text-center Promedio
       %tbody
         %tr
+          %td Calificación general
+          %td.text-center= calculate_overall(@professor_course_evaluation.overall_score, @eq)
+        %tr
           %td Puntual llegando a clases temprano
-          %td.text-center= @professor_course_evaluation.overall_arrival_puntuality
+          %td.text-center= calculate_overall(@professor_course_evaluation.overall_arrival_puntuality, @eq)
         %tr
           %td Puntual entregando evaluaciones revisadas
-          %td.text-center= @professor_course_evaluation.overall_feedback_puntuality
+          %td.text-center= calculate_overall(@professor_course_evaluation.overall_feedback_puntuality, @eq)
         %tr
           %td Conocimiento y dominio de la materia
-          %td.text-center= @professor_course_evaluation.overall_knowledge
+          %td.text-center= calculate_overall(@professor_course_evaluation.overall_knowledge, @eq)
         %tr
           %td Atiende dudas de los estudiantes
-          %td.text-center= @professor_course_evaluation.overall_addresses_question
+          %td.text-center= calculate_overall(@professor_course_evaluation.overall_addresses_question, @eq)
         %tr
           %td Se intereza por el aprendizaje del estudiante
-          %td.text-center= @professor_course_evaluation.overall_learning_interest
+          %td.text-center= calculate_overall(@professor_course_evaluation.overall_learning_interest, @eq)
         %tr
           %td Dificultad del curso con este profesor
-          %td.text-center= @professor_course_evaluation.overall_difficulty
+          %td.text-center= calculate_overall(@professor_course_evaluation.overall_difficulty, @eq)
         %tr
           %td Claridad de las explicaciones
-          %td.text-center= @professor_course_evaluation.overall_clearness
+          %td.text-center= calculate_overall(@professor_course_evaluation.overall_clearness, @eq)
         %tr
           %td Respeto hacia los estudiantes
-          %td.text-center= @professor_course_evaluation.overall_respect
+          %td.text-center= calculate_overall(@professor_course_evaluation.overall_respect, @eq)
     %hr
